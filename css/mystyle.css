@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #f1f1f1;
+}
+body {
+  background-color: rgb(0,0,8);
+  font-family: "Montserrat", sans-serif
+}
+header {
+
+}
+main {
+  padding: 5% 5%;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  margin-top: 10px;
+}
+nav li {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+#titulo {
+  padding: 5% 5%;
+  font-size: 80px;
+}
+.redes-sociais {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.redes-sociais i {
+  margin: 0 5%;
+}
+.section-title {
+  font-size: 1.8em;
+}
