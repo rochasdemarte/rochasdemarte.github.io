@@ -19,6 +19,7 @@ a {
 }
 nav {
   margin-top: 10px;
+  text-align: center;
 }
 nav li {
   display: inline-block;
