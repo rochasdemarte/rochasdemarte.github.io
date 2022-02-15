@@ -1,25 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 
 :root {
   --main-color: rgb(250,142,42);
-  --text-color: #f1f1f1;
+  --text-color: rgb(202,202,202);
+  --bg-color: rgb(10,10,10);
+  --shadow-color: rgb(2,2,2);
+  --grad-color: rgb(51,33,15);
 }
 * {
   margin: 0;
   padding: 0;
+  cursor: none;
 }
 body {
-  cursor: none;
   overflow-x: hidden;
   color: var(--text-color);
   width: 100%;
   background-color: rgb(10,10,10);
-  font-family: "Montserrat", sans-serif
+  background-color: var(--bg-color);
+  background: linear-gradient(90deg, rgba(10,10,10,1) 41%, rgba(118,70,24,1) 100%);
+  /*
+  background-image: url('https://www.wildtextures.com/wp-content/uploads/2012/01/wildtextures-creased-black-paper-texture.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay; */
+  font-family: "Montserrat", sans-serif;
 }
 header {
-  box-shadow: 0px 10px 10px rgba(5,5,5,0.6);
+  opacity: 1;
+  background: var(--bg-color);
+  background: linear-gradient(90deg, var(--bg-color) 44%, var(--grad-color) 100%);
+  margin: 0;
+  border-radius: 15px;
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 10px rgb(2,2,2);
+}
+.bar {
+  margin: 0 50px;
+  width: 150px;
+  height: 15px;
+  border-radius: 25px;
+  background: var(--main-color);
 }
 main {
-  padding: 50px 5%;
+
 }
 a {
   cursor: none;
@@ -27,46 +57,65 @@ a {
   transition: all 0.3s;
 }
 nav {
-  margin-top: 10px;
-  text-align: center;
+  position: relative;
+  top: 50px;
+  right: 50px;
+  text-align: right;
 }
 nav li {
   cursor: none;
   display: inline-block;
-  width: 30%;
+  margin: 0 2em;
   text-align: center;
-  font-weight: 100;
+  font-weight: 300;
+  transition: all 0.3s;
 }
 nav li:hover {
-  font-size: 1.1em;
   color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
 }
+.text-shadow {
 
+}
 #titulo {
-  padding: 50px 5%;
-  font-size: 9em;
-  font-weight: 400;
-  width: 65%;
+  top: 0;
+  position: relative;
+  padding: 50px;
+  font-size: 13vh;
+  font-weight: 500;
+  width: 30%;
   -webkit-text-stroke: 1px var(--text-color);
   -webkit-text-fill-color: transparent;
-  transition: all 0.2s;
+  transition: all 0.3s;
+}
+#subtitulo {
+  position: relative;
+  bottom: 0;
+  padding: 50px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--text-color);
+  transition: all 0.3s;
 }
 c:hover {
   -webkit-text-fill-color: var(--text-color);
 }
 
 .redes-sociais {
-  text-align: center;
-  padding: 30px 0 10px 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  padding: 2em;
 }
 .redes-sociais svg {
-  fill: var(--main-color);
+  fill: var(--text-color);
   width: 30px;
-  margin: 0 5%;
+  margin: 0 3em;
   transition: all 0.3s;
 }
 .redes-sociais svg:hover {
-  fill: #f1f1f1;
+  fill: var(--main-color);
 }
 .section-title {
   font-size: 1.8em;
@@ -82,10 +131,10 @@ section {
   border-radius: 5px;
   border: 1px solid var(--main-color);
   padding: 50px;
-  color: #f1f1f1;
-  background: rgba(10, 10, 10, 0.4);
-  box-shadow: -15px -15px 0px rgb(250 142 42),
-    -10px -10px 10px rgb(5 5 10 / 70%)
+  color: var(--text-color);
+  background: var(--bg-color);
+  box-shadow: -15px -15px 0px var(--main-color),
+    -10px -10px 10px var(--shadow-color);
 }
 .show-block {
   visibility: visible;
@@ -93,7 +142,8 @@ section {
 }
 #canvas {
   position: fixed;
-  z-index: -1;
+  z-index: 1;
+  pointer-events: none;
 }
 
 input,
@@ -112,7 +162,6 @@ div {
   color: white;
   background: rgb(250,142,42);
   padding: 4px;
-  border-radius: 2px;
 }
 /* width */
 ::-webkit-scrollbar {
