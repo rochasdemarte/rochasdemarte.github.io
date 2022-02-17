@@ -69,7 +69,7 @@ function themeUpdate() {
     root.style.setProperty('--main-color', orange);
     root.style.setProperty('--text-color', dark);
     root.style.setProperty('--bg-color', light);
-    root.style.setProperty('--shadow-color', 'rgb(160,160,160)');
+    root.style.setProperty('--shadow-color', 'rgb(18,18,18)');
     root.style.setProperty('--grad-color', 'rgb(243 212 181)');
   }
 }

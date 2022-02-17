@@ -10,9 +10,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   cursor: none;
 }
 body {
+  overscroll-behavior: none;
   overflow-x: hidden;
   color: var(--text-color);
   width: 100%;
@@ -32,21 +34,25 @@ header {
   background: linear-gradient(90deg, var(--bg-color) 44%, var(--grad-color) 100%);
   margin: 0;
   border-radius: 15px;
+  border: 1px solid rgb(20,20,20);
   width: 95%;
-  height: 95%;
+  height: 95vh;
   position: absolute;
   left: 50%;
   top: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  box-shadow: 0px 0px 10px rgb(2,2,2);
+  box-shadow: 0px 0px 5px var(--shadow-color);
 }
 .bar {
   margin: 0 50px;
   width: 150px;
-  height: 15px;
+  height: 25px;
   border-radius: 25px;
-  background: var(--main-color);
+  border: 1px solid var(--text-color);
+}
+.bar:hover {
+  background: var(--text-color);
 }
 main {
 
@@ -57,7 +63,7 @@ a {
   transition: all 0.3s;
 }
 nav {
-  position: relative;
+  position: fixed;
   top: 50px;
   right: 50px;
   text-align: right;
@@ -82,7 +88,7 @@ nav li:hover {
   position: relative;
   padding: 50px;
   font-size: 13vh;
-  font-weight: 500;
+  font-weight: 700;
   width: 30%;
   -webkit-text-stroke: 1px var(--text-color);
   -webkit-text-fill-color: transparent;
@@ -92,9 +98,11 @@ nav li:hover {
   position: relative;
   bottom: 0;
   padding: 50px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 300;
   color: var(--text-color);
+  -webkit-text-stroke: 1px var(--text-color);
+  -webkit-text-fill-color: transparent;
   transition: all 0.3s;
 }
 c:hover {
@@ -144,6 +152,8 @@ section {
   position: fixed;
   z-index: 1;
   pointer-events: none;
+  width: 100%;
+  height: 100vh;
 }
 
 input,
