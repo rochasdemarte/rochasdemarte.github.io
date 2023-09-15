@@ -1,5 +1,3 @@
-const $ = q => document.querySelector(q);
-
 // Canvas setup
 const canvas = $('#canvas');
 const ctx = canvas.getContext('2d');
@@ -17,7 +15,7 @@ let orange = 'rgb(250,142,42)';
 let light = 'rgb(202,202,202)';
 let dark = 'rgb(10,10,10)';
 
-let firecolor = '250,142,42';
+let firecolor = '10,10,10';
 let angle = 0;
 let r = 0;
 
@@ -29,25 +27,10 @@ let BGblue = 0;
 var root = document.querySelector(':root');
 let fireFactor = 50;
 
-const sobreContainer = $('#sobre-section');
-const projContainer = $('#proj-section');
-const cttContainer = $('#contato-section');
 var darkMode = true;
 
-const sobreNav = $('#nav-sobre');
-const projNav = $('#nav-proj');
-const cttNav = $('#nav-ctt');
 const moonBtn = $('#nav-moon');
 const sunBtn = $('#nav-sun');
-
-const sections = [sobreNav, projNav, cttNav];
-const containers = [sobreContainer, projContainer, cttContainer];
-
-sections.forEach((section, i) => {
-  section.onclick = () => {
-    containers[i].classList.toggle('show-block');
-  }
-});
 
 moonBtn.onclick = e => {
     darkMode = true;
@@ -89,7 +72,7 @@ window.onmouseout = e => {
 };
 
 // mouse over effect
-document.querySelectorAll('.nav-but').forEach((item, i) => {
+document.querySelectorAll('.nav-btn').forEach((item, i) => {
   item.onmouseover = e => {
     if (darkMode) {
       firecolor = '242,242,242';

@@ -1,107 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pedro Rocha Martin - Creative Technologist</title>
-    <script type="text/javascript">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedro Rocha Martin - Creative Technologist</title>
+  <script type="text/javascript">
       //<meta http-equiv="refresh" content="2" >
-    </script>
-    <meta name="description" content="Como aproximador convidativo Pedro Rocha Martin acompanha as oscilações e frequências que conflituam o mundo contemporâneo, busca e investiga maneiras de nutrir o campo relacional entre as realidades, as construções de símbolos, e as diversas esferas culturais.">
-    <meta name="keywords" content="">
-    <meta name="author" content="Pedro Rocha Martin">
-    <link rel="stylesheet" href="css/mystyle.css">
-    <link rel="icon" href="">
-    <!-- <script src="addons/p5.min.js"></script>
-    <script src="addons/p5.dom.min.js"></script>
-    <script src="addons/p5.sound.js"></script> -->
-    <script src="index.js" type="text/javascript" defer></script>
-    <script src="audio.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <canvas id="canvas"></canvas>
-    <header>
-      <nav class="text-shadow">
-        <ul>
-          .<li><a class="nav-but" id="nav-sobre">SOBRE</a></li>.
-          <li><a class="nav-but" id="nav-proj">PROJETOS</a></li>.
-          <li><a class="nav-but" id="nav-ctt">CONTATO</a></li>.
-          <li><a class="nav-but" id="nav-moon">&#9790;</a></li>.
-          <li><a class="nav-but" id="nav-sun">&#9788;</a></li>.
-        </ul>
-      </nav>
-      <h1 class="text-shadow" id="titulo"><c>P</c><c>e</c><c>d</c><c>r</c><c>o</c> <c>R</c><c>o</c><c>c</c><c>h</c><c>a</c> <c>M</c><c>a</c><c>r</c><c>t</c><c>i</c><c>n</c></h1>
-      <div class="bar"></div>
-      <h2 class="text-shadow" id="subtitulo">
-        + <c> New Media Artist </c><br>
-        + <c> Creative Developer </c><br>
-        + <c> Art Director </c>
-      </h2>
-      <div class="redes-sociais">
-        <a class="nav-but" target="_blank" href="https://www.instagram.com/rochas.de.marte/">
-          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path></svg>
-        </a>
+  </script>
+  <meta name="description"
+    content="Como aproximador convidativo Pedro Rocha Martin acompanha as oscilações e frequências que conflituam o mundo contemporâneo, busca e investiga maneiras de nutrir o campo relacional entre as realidades, as construções de símbolos, e as diversas esferas culturais.">
+  <meta name="keywords" content="">
+  <meta name="author" content="Pedro Rocha Martin">
+  <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js" defer></script>
+  <script src="index.js" type="text/javascript" defer></script>
+</head>
 
-        <a class="nav-but" target="_blank" href="https://www.youtube.com/channel/UCoY-wr250RsQ_FLSpoiS9iA">
-          <svg id="youtube-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
-        </a>
-        <a class="nav-but" target="_blank" href="https://soundcloud.com/rochas-de-marte">
-          <svg id="soundcloud-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c0-.057-.045-.1-.09-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.09.094s.089-.045.104-.104l.21-1.319-.21-1.334c0-.061-.044-.09-.09-.09m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.12.119.12.061 0 .105-.061.121-.12l.254-2.474-.254-2.548c-.016-.06-.061-.12-.121-.12m.945-.089c-.075 0-.135.06-.15.135l-.193 2.64.21 2.544c.016.077.075.138.149.138.075 0 .135-.061.15-.15l.24-2.532-.24-2.623c0-.075-.06-.135-.135-.135l-.031-.017zm1.155.36c-.005-.09-.075-.149-.159-.149-.09 0-.158.06-.164.149l-.217 2.43.2 2.563c0 .09.075.157.159.157.074 0 .148-.068.148-.158l.227-2.563-.227-2.444.033.015zm.809-1.709c-.101 0-.18.09-.18.181l-.21 3.957.187 2.563c0 .09.08.164.18.164.094 0 .174-.09.18-.18l.209-2.563-.209-3.972c-.008-.104-.088-.18-.18-.18m.959-.914c-.105 0-.195.09-.203.194l-.18 4.872.165 2.548c0 .12.09.209.195.209.104 0 .194-.089.21-.209l.193-2.548-.192-4.856c-.016-.12-.105-.21-.21-.21m.989-.449c-.121 0-.211.089-.225.209l-.165 5.275.165 2.52c.014.119.104.225.225.225.119 0 .225-.105.225-.225l.195-2.52-.196-5.275c0-.12-.105-.225-.225-.225m1.245.045c0-.135-.105-.24-.24-.24-.119 0-.24.105-.24.24l-.149 5.441.149 2.503c.016.135.121.24.256.24s.24-.105.24-.24l.164-2.503-.164-5.456-.016.015zm.749-.134c-.135 0-.255.119-.255.254l-.15 5.322.15 2.473c0 .15.12.255.255.255s.255-.12.255-.27l.15-2.474-.165-5.307c0-.148-.12-.27-.271-.27m1.005.166c-.164 0-.284.135-.284.285l-.103 5.143.135 2.474c0 .149.119.277.284.277.149 0 .271-.12.284-.285l.121-2.443-.135-5.112c-.012-.164-.135-.285-.285-.285m1.184-.945c-.045-.029-.105-.044-.165-.044s-.119.015-.165.044c-.09.054-.149.15-.149.255v.061l-.104 6.048.115 2.449v.008c.008.06.03.135.074.18.058.061.142.104.234.104.08 0 .158-.044.209-.09.058-.06.091-.135.091-.225l.015-.24.117-2.203-.135-6.086c0-.104-.061-.193-.135-.239l-.002-.022zm1.006-.547c-.045-.045-.09-.061-.15-.061-.074 0-.149.016-.209.061-.075.061-.119.15-.119.24v.029l-.137 6.609.076 1.215.061 1.185c0 .164.148.314.328.314.181 0 .33-.15.33-.329l.15-2.414-.15-6.637c0-.12-.074-.221-.165-.277m8.934 3.777c-.405 0-.795.086-1.139.232-.24-2.654-2.46-4.736-5.188-4.736-.659 0-1.305.135-1.889.359-.225.09-.27.18-.285.359v9.368c.016.18.15.33.33.345h8.185C22.681 17.218 24 15.914 24 14.28s-1.319-2.952-2.938-2.952"></path></svg>
-        </a>
-
+<body>
+  <canvas id="canvas"></canvas>
+  <header>
+    <div class="nav-mobile">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <nav>
+      <!-- <h3>Pedro<high>.</high>art<high>( )</high></h3> -->
+      <ul>
+        <li><a class="nav-btn" id="nav-sobre">SOBRE</a></li>
+        <li><a class="nav-btn" id="nav-proj">PROJETOS</a></li>
+        <li><a class="nav-btn" id="nav-ctt">CONTATO</a></li>
+        <li><a class="nav-btn" id="nav-moon">&#9790;</a></li>
+        <li><a class="nav-btn" id="nav-sun">&#9788;</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="hero-container">
+    <div id="hero-title">
+      <h1>Pedro <br> Rocha <br> Martin</h1>
+      <h4></h4>
+    </div>
+    <div id="soon">
+      <h2></h2>
+      <h2></h2>
+      <h2></h2>
+      <p>Desenvolvo soluções envolvendo arte e tecnologia</p>
+      <div id="in-btn-container">
+        <button id="signin-btn" class="in-btn">Todos os Projetos</button>
       </div>
-    </header>
-    <main>
-      <section id="sobre-section">
-        <p class="section-title">SOBRE</p>
-        <br>
-        <p>
-          Como aproximador convidativo Pedro Rocha Martin acompanha as oscilações e frequências que conflituam o mundo contemporâneo, busca e investiga maneiras de nutrir o campo relacional entre as realidades, as construções de símbolos, e as diversas esferas culturais.
-          <br><br>
-          Artista multimídia brasileiro, bacharel em Artes Visuais na Universidade Federal do Rio Grande do Sul, elenca em seu trabalho uma leitura atrelada ao envolvimento e à entrega do receptor.
-           Em múltiplas plataformas compartilha a função de produtor na maneira de interagir e se relacionar com sua obra.
-          Pedro se mune da linguagem audiovisual como suporte diretriz do desenvolvimento
-           de seu trabalho e ferramenta de estudo e autoconhecimento, aliado ao uso desmistificador
-          das novas mídias digitais assim como da eletrônica analógica, procura se comunicar direta
-           e indiretamente com a carga subjetiva do receptor.
-          <br><br>
-          <p class="section-title">BIO</p>
-          <br>
-          Tem o início de sua trajetória na experimentação audiovisual,  trabalhando como montador e finalizador
-          de vídeo, onde desde 2008 adquiriu uma experiência que o acompanha na construção de um olhar artístico
-          curioso para o mundo. De 2013 até 2015, participa como assistente de direção da equipe
-           da RITO Entretenimento Inteligente, trabalhando com produções audiovisuais e direção de palco e atores.
-          Ainda em 2015 participa da produção do curta metragem argentino Suave Mariposa, na finalização de efeitos visuais,
-           e composição da trilha original. Começa no mesmo ano uma pesquisa em eletrônica voltada para sua produção artística, em paralelo a desdobramentos práticos desta pesquisa se originam alguns de seus futuros trabalhos onde investiga som, luz, vídeo, e suas relações. Seguindo nessa busca e transitando por entre formatos realiza em 2018 a performance "GlitchLab", e no começo de 2019 a instalação "INSTANTE: retro-olho", na AntiExpo - Descuradoria Urbana. Também em 2019, participa da residência artística premiada no 13º Prêmio Açorianos de Artes Plásticas "As coisas que são ditas antes. Ocupação. Residência. Exposição",  na Casa Baka, com a instalação "os olhos que me viram antes que eu te visse".
-        </p>
-      </section>
+      <text>New Media Artist . Creative Developer . Art Director</text>
+    </div>
+  </div>
+  <div class="redes-sociais">
+    <a class="nav-btn" target="_blank" href="https://www.instagram.com/rochas.de.marte/">
+      <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24">
+        <path
+          d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z">
+        </path>
+      </svg>
+    </a>
+    <a class="nav-btn" target="_blank" href="https://www.youtube.com/channel/UCoY-wr250RsQ_FLSpoiS9iA">
+      <svg id="youtube-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
+        </path>
+      </svg>
+    </a>
+    <a class="nav-btn" target="_blank" href="https://soundcloud.com/rochas-de-marte">
+      <svg id="soundcloud-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c0-.057-.045-.1-.09-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.09.094s.089-.045.104-.104l.21-1.319-.21-1.334c0-.061-.044-.09-.09-.09m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.12.119.12.061 0 .105-.061.121-.12l.254-2.474-.254-2.548c-.016-.06-.061-.12-.121-.12m.945-.089c-.075 0-.135.06-.15.135l-.193 2.64.21 2.544c.016.077.075.138.149.138.075 0 .135-.061.15-.15l.24-2.532-.24-2.623c0-.075-.06-.135-.135-.135l-.031-.017zm1.155.36c-.005-.09-.075-.149-.159-.149-.09 0-.158.06-.164.149l-.217 2.43.2 2.563c0 .09.075.157.159.157.074 0 .148-.068.148-.158l.227-2.563-.227-2.444.033.015zm.809-1.709c-.101 0-.18.09-.18.181l-.21 3.957.187 2.563c0 .09.08.164.18.164.094 0 .174-.09.18-.18l.209-2.563-.209-3.972c-.008-.104-.088-.18-.18-.18m.959-.914c-.105 0-.195.09-.203.194l-.18 4.872.165 2.548c0 .12.09.209.195.209.104 0 .194-.089.21-.209l.193-2.548-.192-4.856c-.016-.12-.105-.21-.21-.21m.989-.449c-.121 0-.211.089-.225.209l-.165 5.275.165 2.52c.014.119.104.225.225.225.119 0 .225-.105.225-.225l.195-2.52-.196-5.275c0-.12-.105-.225-.225-.225m1.245.045c0-.135-.105-.24-.24-.24-.119 0-.24.105-.24.24l-.149 5.441.149 2.503c.016.135.121.24.256.24s.24-.105.24-.24l.164-2.503-.164-5.456-.016.015zm.749-.134c-.135 0-.255.119-.255.254l-.15 5.322.15 2.473c0 .15.12.255.255.255s.255-.12.255-.27l.15-2.474-.165-5.307c0-.148-.12-.27-.271-.27m1.005.166c-.164 0-.284.135-.284.285l-.103 5.143.135 2.474c0 .149.119.277.284.277.149 0 .271-.12.284-.285l.121-2.443-.135-5.112c-.012-.164-.135-.285-.285-.285m1.184-.945c-.045-.029-.105-.044-.165-.044s-.119.015-.165.044c-.09.054-.149.15-.149.255v.061l-.104 6.048.115 2.449v.008c.008.06.03.135.074.18.058.061.142.104.234.104.08 0 .158-.044.209-.09.058-.06.091-.135.091-.225l.015-.24.117-2.203-.135-6.086c0-.104-.061-.193-.135-.239l-.002-.022zm1.006-.547c-.045-.045-.09-.061-.15-.061-.074 0-.149.016-.209.061-.075.061-.119.15-.119.24v.029l-.137 6.609.076 1.215.061 1.185c0 .164.148.314.328.314.181 0 .33-.15.33-.329l.15-2.414-.15-6.637c0-.12-.074-.221-.165-.277m8.934 3.777c-.405 0-.795.086-1.139.232-.24-2.654-2.46-4.736-5.188-4.736-.659 0-1.305.135-1.889.359-.225.09-.27.18-.285.359v9.368c.016.18.15.33.33.345h8.185C22.681 17.218 24 15.914 24 14.28s-1.319-2.952-2.938-2.952">
+        </path>
+      </svg>
+    </a>
+  </div>
+  <main>
+    <section class="info-section" id="sobre">
+      <p class="section-title">SOBRE</p>
       <br>
-      <section id="proj-section">
-        <p class="section-title">PROJETOS</p>
-        <br>
-      </section>
-      <section id="contato-section">
-        <p class="section-title">CONTATO</p>
-        <br>
-        <p>pedrorcontato@gmail.com</p>
+      <p>
+        Como aproximador convidativo Pedro Rocha Martin acompanha as oscilações e frequências que conflituam o mundo
+        contemporâneo, busca e investiga maneiras de nutrir o campo relacional entre as realidades, as construções de
+        símbolos, e as diversas esferas culturais.
+        <br><br>
+        Artista multimídia brasileiro, Bacharel em Artes Visuais na Universidade Federal do Rio Grande do Sul, elenca em
+        seu trabalho uma leitura atrelada ao envolvimento e à entrega do receptor.
+        Em múltiplas plataformas compartilha a função de produtor na maneira de interagir e se relacionar com sua obra.
+        Pedro se mune da linguagem audiovisual como suporte diretriz do desenvolvimento
+        de seu trabalho e ferramenta de estudo e autoconhecimento, aliado ao uso desmistificador
+        das novas mídias digitais assim como da eletrônica analógica, procura se comunicar direta
+        e indiretamente com a carga subjetiva do receptor.
+        <br><br>
+      <p class="section-title">BIO</p>
+      <br>
+      <p>
+      Tem o início de sua trajetória na experimentação audiovisual, trabalhando como montador e finalizador
+      de vídeo, onde desde 2008 adquiriu uma experiência que o acompanha na construção de um olhar artístico
+      curioso para o mundo. De 2013 até 2015, participa como assistente de direção da equipe
+      da RITO Entretenimento Inteligente, trabalhando com produções audiovisuais e direção de palco e atores.
+      Ainda em 2015 tem início sua pesquisa em eletrônica voltada para sua produção
+      artística, em paralelo a desdobramentos práticos desta pesquisa se originam alguns de seus futuros trabalhos onde
+      investiga som, luz, vídeo, e suas relações. Seguindo nessa busca e transitando por entre formatos realiza em 2018
+      a performance "GlitchLab", e no começo de 2019 a instalação "INSTANTE: retro-olho", na AntiExpo - Descuradoria
+      Urbana. Também em 2019, participa da residência artística premiada no 13º Prêmio Açorianos de Artes Plásticas "As
+      coisas que são ditas antes. Ocupação. Residência. Exposição", na Casa Baka, com a instalação "os olhos que me
+      viram antes que eu te visse".
+      </p>
+    </section>
+    <br>
+    <section class="info-section" id="proj">
+      <p class="section-title">PROJETOS</p>
+      <div class="horizontal-gallery-container">
+        <div class="horizontal-card">
+          <img src="" alt="">
+        </div>
+      </div>
+      <br>
+    </section>
+    <section class="info-section" id="contato">
+      <p class="section-title">CONTATO</p>
+      <br>
+      <p>pedrorcontato@gmail.com</p>
+      <p>
+      </p>
+    </section>
 
-        <p>
-          <form class="contato-form">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" value="">
-            <label for="email">Email</label>
-            <input type="email" name="email" value="">
-            <br>
-            <label for="mensagem"></label>
-            <textarea name="mensagem" rows="8" cols="80"></textarea>
-            <button type="button" name="submit">Enviar</button>
-          </form>
-        </p>
-      </section>
 
+  </main>
+  <footer>
+  </footer>
+</body>
 
-    </main>
-    <footer>
-    </footer>
-  </body>
 </html>
