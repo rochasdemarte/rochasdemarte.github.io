@@ -12,10 +12,10 @@ let trackMode = 'mouse';
 let gravity = -3.5;
 
 let orange = 'rgb(250,142,42)';
-let light = 'rgb(202,202,202)';
+let light = 'rgb(243,243,243)';
 let dark = 'rgb(10,10,10)';
 
-let firecolor = '10,10,10';
+let firecolor = '250,142,42';
 let angle = 0;
 let r = 0;
 
@@ -43,17 +43,13 @@ sunBtn.onclick = e => {
 
 function themeUpdate() {
   if (darkMode) {
-    root.style.setProperty('--main-color', orange);
-    root.style.setProperty('--text-color', light);
-    root.style.setProperty('--bg-color', dark);
-    root.style.setProperty('--shadow-color', 'rgb(2,2,2)');
-    root.style.setProperty('--grad-color', 'rgb(51,33,15)');
+    root.style.setProperty('--high-text', orange);
+    root.style.setProperty('--low-text', light);
+    root.style.setProperty('--bg', dark);
   } else {
-    root.style.setProperty('--main-color', orange);
-    root.style.setProperty('--text-color', dark);
-    root.style.setProperty('--bg-color', light);
-    root.style.setProperty('--shadow-color', 'rgb(18,18,18)');
-    root.style.setProperty('--grad-color', 'rgb(243 212 181)');
+    root.style.setProperty('--high-text', orange);
+    root.style.setProperty('--low-text', dark);
+    root.style.setProperty('--bg', light);
   }
 }
 
