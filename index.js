@@ -144,7 +144,7 @@ function init(){
 }
 
 function animate(){
-  orange = rgb(255, 166, 61), rgb(255, 61, 119), rgb(51, 138, 255), rgb(60, 240, 197);
+  // orange = rgb(255, 166, 61), rgb(255, 61, 119), rgb(51, 138, 255), rgb(60, 240, 197);
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = `rgba(${BGred}, ${BGgreen}, ${BGblue}, ${BGalpha})`;

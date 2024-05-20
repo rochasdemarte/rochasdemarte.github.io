@@ -56,6 +56,7 @@ text {
 }
 
 p {
+  text-align: justify;
   font-weight: 100;
   font-size: 1em;
 }
@@ -228,6 +229,10 @@ li a:hover {
   color: var(--bg);
 }
 
+.ctt {
+  font-weight: 800;
+}
+
 #Sobre {}
 
 
@@ -272,6 +277,13 @@ li a:hover {
   background-color: var(--high-text);
   color: var(--bg);
   border: 1px solid black;
+}
+
+.biofocus {
+  font-weight: bold;
+  font-size: 3vw;
+  color: var(--low-text);
+  margin: 50px 0;
 }
 
 .fa {
@@ -442,6 +454,8 @@ high {
   ul {
     padding-top: 40%;
     background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
   }
 
   li {
@@ -449,7 +463,7 @@ high {
   }
 
   li a {
-    color: var(--bg);
+    color: var(--low-text);
     font-size: 2.5em;
   }
 
@@ -459,13 +473,15 @@ high {
 
   .show-mobile {
     display: block;
+    width: 100%;
+    height: 100%;
   }
 
   .nav-mobile {
     display: inline-block;
     position: fixed;
-    top: 50px;
-    right: 50px;
+    top: 20px;
+    right: 20px;
   }
 
   .fa {
@@ -487,12 +503,12 @@ high {
   }
 
   #hero-title {
-    padding-top: 50px;
+    padding-top: 80px;
   }
 
   #contato,
   .hero-container {
-    padding: 80px 10px;
+    padding: 80px 20px;
     flex-direction: column;
   }
 
@@ -501,6 +517,10 @@ high {
   }
 
   #soon p {
+    font-size: 1.6em;
+  }
+
+  .biofocus {
     font-size: 1.2em;
   }
 

@@ -1,4 +1,5 @@
 const $ = x => document.querySelector(x);
+let biofocus = document.querySelectorAll('.biofocus');
 let state = 0;
 
 function handleNav() {
@@ -23,3 +24,4 @@ document.querySelectorAll('.nav-btn').forEach( e => {
         if (window.innerWidth <= 800) handleNav();
     }
 });
+
