@@ -1,0 +1,43 @@
+body .btn,
+body .btn2 {
+  width: 300px;
+  height: 100px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 100px;
+  color: rgba(255,255,255,0.9);
+  border-radius: 50px;
+  background: linear-gradient(-45deg, rgb(255, 166, 61), rgb(255, 61, 119), rgb(51, 138, 255), rgb(60, 240, 197));
+  background-size: 600%;
+  -webkit-animation: anime 16s linear infinite;
+          animation: anime 16s linear infinite;
+}
+body .btn2 {
+  position: absolute;
+  margin-top: -70px;
+  z-index: -1;
+  filter: blur(30px);
+  opacity: 0.8;
+}
+@-webkit-keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

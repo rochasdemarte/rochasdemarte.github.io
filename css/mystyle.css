@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Serif+SC:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat:wght@400&display=swap');
 
 :root {
-  --high-text: rgb(250, 142, 42);
+  --high-text: rgb(8, 255, 90);
   --low-text: rgb(243, 243, 243);
   --bg: rgb(10, 10, 10);
 }
@@ -22,14 +23,17 @@ body {
   height: 100%;
 }
 
+.bungee-font {
+  font-family: "Bungee Hairline", sans-serif;
+  font-weight: 400;
+}
+
 h1 {
-  font-family: 'Montserrat', sans-serif;
   font-size: 6em;
   color: var(--low-text);
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
   font-size: 3vw;
   color: var(--low-text);
   margin: 10px 0;
@@ -43,7 +47,6 @@ h3 {
   font-size: 1.5em;
   position: fixed;
   padding: 15px 50px;
-  font-family: 'Montserrat', sans-serif;
   display: inline-block;
   color: var(--low-text);
 }
@@ -68,8 +71,9 @@ a {
   bottom: 0;
   right: 0;
   text-align: right;
-  padding: 2em;
+  padding-bottom: 2em;
   z-index: 99;
+  display: flex;
 }
 
 .redes-sociais svg {
@@ -86,6 +90,7 @@ a {
 }
 
 #canvas {
+  display: none;
   position: fixed;
   z-index: 1;
   pointer-events: none;
@@ -150,7 +155,6 @@ footer {
 
 #soon p {
   text-align: right;
-  font-family: 'Montserrat', sans-serif;
   font-size: 2.5em;
 }
 
@@ -166,7 +170,6 @@ header {
 
 nav {
   background: var(--bg);
-  font-family: 'Montserrat', sans-serif;
 }
 
 ul {
@@ -220,22 +223,13 @@ li a:hover {
   color: var(--high-text);
 }
 
-#contato .section-title {
+#contato .section-title,
+#contato .section-title-low {
   color: var(--bg);
 }
 
 #Sobre {}
 
-#modalidades {
-  background-color: var(--low-text);
-  color: var(--bg);
-}
-
-#modalidades h2 {
-  padding: 40px;
-  font-size: 2em;
-  color: var(--bg);
-}
 
 #contato {
   padding: 50px 50px 100px 80px;
@@ -252,7 +246,6 @@ li a:hover {
 .contato-text {
   margin: 25px 0;
   color: var(--high-text);
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.4em;
 }
 
@@ -348,8 +341,6 @@ high {
 .horizontal-card {
   height: 50vh;
   flex: 1;
-  border: 1px solid var(--low-text);
-  border-radius: 10px;
   overflow: hidden;
   transition: 0.4s;
   cursor: pointer;
@@ -362,7 +353,7 @@ high {
 }
 
 .horizontal-card:hover {
-  flex: 3;
+  flex: 2;
 }
 
 .horizontal-card:hover img{

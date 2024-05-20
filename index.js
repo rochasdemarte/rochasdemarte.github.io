@@ -11,11 +11,11 @@ let particleNumber = 100;
 let trackMode = 'mouse';
 let gravity = -3.5;
 
-let orange = 'rgb(250,142,42)';
+let orange = 'rgb(8, 255, 90)';
 let light = 'rgb(243,243,243)';
 let dark = 'rgb(10,10,10)';
 
-let firecolor = '250,142,42';
+let firecolor = '8, 255, 90';
 let angle = 0;
 let r = 0;
 
@@ -73,14 +73,14 @@ document.querySelectorAll('.nav-btn').forEach((item, i) => {
     if (darkMode) {
       firecolor = '242,242,242';
     } else {
-      firecolor = '250,142,42';
+      firecolor = '8, 255, 90';
     }
     fireFactor = 10;
     r = 1;
   }
   item.onmouseout = e => {
     if (darkMode) {
-      firecolor = '250,142,42';
+      firecolor = '8, 255, 90';
     } else {
       firecolor = '10,10,10';
     }
@@ -144,6 +144,8 @@ function init(){
 }
 
 function animate(){
+  orange = rgb(255, 166, 61), rgb(255, 61, 119), rgb(51, 138, 255), rgb(60, 240, 197);
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = `rgba(${BGred}, ${BGgreen}, ${BGblue}, ${BGalpha})`;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
