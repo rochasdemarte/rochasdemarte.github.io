@@ -70,7 +70,8 @@ a {
 .redes-sociais {
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: right;
   padding-bottom: 2em;
   z-index: 99;
@@ -233,8 +234,9 @@ li a:hover {
   font-weight: 800;
 }
 
-#Sobre {}
+#Sobre {
 
+}
 
 #contato {
   padding: 50px 50px 100px 80px;
@@ -252,6 +254,10 @@ li a:hover {
   margin: 25px 0;
   color: var(--high-text);
   font-size: 1.4em;
+}
+
+.ctt a {
+  color: var(--bg);
 }
 
 #in-btn-container {
@@ -326,21 +332,6 @@ li a:hover {
 
 .fa-instagram:hover {
   bottom: 48px;
-}
-
-#federa {
-  padding: 2vh;
-  text-align: center;
-}
-
-#federa a {
-  text-decoration: none;
-}
-
-.federacao {
-  display: inline-block;
-  margin: 0 5vw;
-  width: 8vw;
 }
 
 high {
