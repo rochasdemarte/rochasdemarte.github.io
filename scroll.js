@@ -2,8 +2,11 @@ var contatext = 'ME CONTE SOBRE';
 var textadd = [' SEU PROJETO', ' SUA IDEIA', ' SUA MARCA', ' SEU DESAFIO'];
 
 var startWrite = false;
-var writeState = 0;
+var writeState = 0; // 0 = SEU PROJETO, 1 = SUA IDEIA, 2 = SUA MARCA, 3 = SEU DESAFIO
+var totalWriteState = 0; // 0 = writing, 1 = waiting, 2 = erasing
 var charState = 0;
+var writingTime = 80;
+var waitingTime = 800;
 
 var contatextElement = document.querySelector('#contatext');
 var bioElements = document.querySelectorAll('.bio');
@@ -31,11 +34,29 @@ var checkTargetPosition = (element) => {
   return percentage;
 }
 
-function ContactTitleTypewrite (){
-  if (charState < (contatext + textadd[writeState]).length) {
-    contatextElement.innerHTML += (contatext + textadd[writeState]).charAt(charState);
-    charState++;
-    setTimeout(ContactTitleTypewrite, 100);
+function ContactTitleTypewrite () {
+  if (totalWriteState == 0){
+    if (charState < (contatext + textadd[writeState]).length) {
+      contatextElement.innerHTML += (contatext + textadd[writeState]).charAt(charState);
+      charState++;
+      setTimeout(ContactTitleTypewrite, writingTime);
+    } else {
+      totalWriteState = 1;
+      setTimeout(ContactTitleTypewrite, waitingTime);
+    }
+  } else if (totalWriteState == 1) {
+    totalWriteState = 2;
+    setTimeout(ContactTitleTypewrite, writingTime);
+  } else if (totalWriteState == 2){
+    if (charState > contatext.length) {
+      contatextElement.innerHTML = contatextElement.innerHTML.slice(0, -1);
+      charState--;
+      setTimeout(ContactTitleTypewrite, writingTime);
+    } else {
+      writeState = (writeState + 1) % textadd.length;
+      totalWriteState = 0;
+      setTimeout(ContactTitleTypewrite, writingTime);
+    }
   }
 }
 
