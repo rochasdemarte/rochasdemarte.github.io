@@ -1,5 +1,7 @@
+
+// Navigation Bar Section
+
 const $ = x => document.querySelector(x);
-let biofocus = document.querySelectorAll('.biofocus');
 let state = 0;
 
 function handleNav() {
@@ -25,3 +27,75 @@ document.querySelectorAll('.nav-btn').forEach( e => {
     }
 });
 
+// Theme Section Dark and Light Mode Settings
+
+var root = document.querySelector(':root');
+
+const moonBtn = $('#nav-moon');
+const sunBtn = $('#nav-sun');
+
+let orange = getComputedStyle(root).getPropertyValue('--high-text');
+let light = getComputedStyle(root).getPropertyValue('--low-text');
+let dark = getComputedStyle(root).getPropertyValue('--bg');
+
+var darkMode = true;
+
+// var darkMode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? true : false;
+
+// window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+//     darkMode = event.matches ? true : false;
+//     themeUpdate();
+// });
+
+// themeUpdate();
+
+moonBtn.onclick = e => {
+    darkMode = true;
+    themeUpdate();
+}
+sunBtn.onclick = e => {
+    darkMode = false;
+    themeUpdate();
+}
+
+function themeUpdate() {
+  if (darkMode) {
+    root.style.setProperty('--low-text', light);
+    root.style.setProperty('--bg', dark);
+  } else {
+    root.style.setProperty('--low-text', dark);
+    root.style.setProperty('--bg', light);
+  }
+}
+
+
+document.querySelectorAll('.color-btn').forEach(element => {
+    
+    let colorTimer;
+    
+    element.addEventListener('mouseover', () => {
+        colorTimer = setInterval(() => {
+            let high = + (orange.slice(4).split(',')[0]);
+            orange = 'hsl(' + ((high + 3) % 360) + ', 40%, 52%)';
+            root.style.setProperty('--high-text', orange);
+        }, 1);
+    });
+
+    element.addEventListener('mouseout', () => {
+        clearInterval(colorTimer);
+        orange = 'hsl(10, 100%, 52%)';
+        root.style.setProperty('--high-text', orange);
+    });
+
+}); 
+
+// Shuffle Array
+
+const shuffleArray = array => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+  }

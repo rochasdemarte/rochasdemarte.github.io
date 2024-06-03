@@ -11,10 +11,6 @@ let particleNumber = 100;
 let trackMode = 'mouse';
 let gravity = -3.5;
 
-let orange = 'rgb(8, 255, 90)';
-let light = 'rgb(243,243,243)';
-let dark = 'rgb(10,10,10)';
-
 let firecolor = '8, 255, 90';
 let angle = 0;
 let r = 0;
@@ -24,34 +20,7 @@ let BGred = 0;
 let BGgreen = 0;
 let BGblue = 0;
 
-var root = document.querySelector(':root');
 let fireFactor = 50;
-
-var darkMode = true;
-
-const moonBtn = $('#nav-moon');
-const sunBtn = $('#nav-sun');
-
-moonBtn.onclick = e => {
-    darkMode = true;
-    themeUpdate();
-}
-sunBtn.onclick = e => {
-    darkMode = false;
-    themeUpdate();
-}
-
-function themeUpdate() {
-  if (darkMode) {
-    root.style.setProperty('--high-text', orange);
-    root.style.setProperty('--low-text', light);
-    root.style.setProperty('--bg', dark);
-  } else {
-    root.style.setProperty('--high-text', orange);
-    root.style.setProperty('--low-text', dark);
-    root.style.setProperty('--bg', light);
-  }
-}
 
 const tracker = {
   x: null,

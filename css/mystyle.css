@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat:wght@400&display=swap');
 
 :root {
-  --high-text: rgb(8, 255, 90);
+  --high-text: hsl(10, 100%, 52%);
   --low-text: rgb(243, 243, 243);
   --bg: rgb(10, 10, 10);
 }
@@ -49,6 +49,7 @@ h3 {
   padding: 15px 50px;
   display: inline-block;
   color: var(--low-text);
+  cursor: pointer;
 }
 
 text {
@@ -113,7 +114,6 @@ div {
 :focus {
   outline: none;
 }
-
 
 footer {
   padding: 10px 0;
@@ -225,13 +225,19 @@ li a:hover {
   color: var(--high-text);
 }
 
-#contato .section-title,
+#contato .section-title {
+  color: var(--bg);
+  font-size: 5.0vw;
+}
+
 #contato .section-title-low {
   color: var(--bg);
+  font-size: 1.8em;
 }
 
 .ctt {
-  font-weight: 800;
+  font-weight: 400;
+  font-size: 2.1em;
 }
 
 #Sobre {
@@ -239,7 +245,7 @@ li a:hover {
 }
 
 #contato {
-  padding: 50px 50px 100px 80px;
+  padding: 50px 50px 20vh 80px;
   color: var(--bg);
   background: var(--high-text);
   box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.2);
@@ -285,7 +291,15 @@ li a:hover {
   border: 1px solid black;
 }
 
+.bio {
+  color: var(--high-text);
+  font-size: 1.6vw;
+  transition: all 1.8s;
+  margin: 20px 0;
+}
+
 .biofocus {
+  opacity: 1;
   font-weight: bold;
   font-size: 3vw;
   color: var(--low-text);
@@ -361,6 +375,14 @@ high {
 
 .horizontal-card:hover img{
   filter: none;
+}
+
+.gallery-title {
+  transition: all 1.4s 0.8s;
+}
+
+.horizontal-card:hover .gallery-title {
+
 }
 
 ::selection {
@@ -522,4 +544,11 @@ high {
     width: calc(100% - 20px);
   }
 
+  #contato .section-title {
+    font-size: 18.5vw;
+  }
+
+  .ctt {
+    font-size: 6.2vw;
+  }
 }
