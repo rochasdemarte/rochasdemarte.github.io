@@ -47,7 +47,6 @@ var darkMode = true;
 //     themeUpdate();
 // });
 
-// themeUpdate();
 
 moonBtn.onclick = e => {
     darkMode = true;
@@ -68,12 +67,23 @@ function themeUpdate() {
   }
 }
 
+themeUpdate();
+
+let titleHome = document.querySelector('.hero-container h1');
+let subtitleHome = document.querySelector('#soon p');
+let navBtns = document.querySelectorAll('.nav-btn');
 
 document.querySelectorAll('.color-btn').forEach(element => {
     
     let colorTimer;
     
     element.addEventListener('mouseover', () => {
+        document.querySelector('#canvas').style.display = 'block';
+        titleHome.style.setProperty('color', 'var(--high-text)');
+        subtitleHome.style.setProperty('color', 'var(--high-text)');
+        navBtns.forEach(el => {
+            el.style.setProperty('color', 'var(--high-text)');
+        });
         colorTimer = setInterval(() => {
             let high = + (orange.slice(4).split(',')[0]);
             orange = 'hsl(' + ((high + 3) % 360) + ', 40%, 52%)';
@@ -82,6 +92,12 @@ document.querySelectorAll('.color-btn').forEach(element => {
     });
 
     element.addEventListener('mouseout', () => {
+        document.querySelector('#canvas').style.display = 'none';
+        titleHome.style.setProperty('color', 'var(--low-text)');
+        subtitleHome.style.setProperty('color', 'var(--low-text)');
+        navBtns.forEach(el => {
+            el.style.setProperty('color', 'var(--low-text)');
+        });
         clearInterval(colorTimer);
         orange = 'hsl(10, 100%, 52%)';
         root.style.setProperty('--high-text', orange);

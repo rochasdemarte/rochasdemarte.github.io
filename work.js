@@ -35,6 +35,12 @@ var works = {
         description: 'Goldsmith University of London . Online . mocapstreamer.live',
         tags: ['arte', 'code', '3D', 'video'],
     },
+    macacoJQ: {
+        name: 'Macaco 3D - Jota Quest Show 25 Anos',
+        year: '2023',
+        description: 'Direção de motion capture para projeto de criação 3D do mascote da banda Jota Quest para música Planeta dos Macacos em show comemorativo de 25 anos.',
+        tags: ['arte', 'code', '3D', 'video'],
+    },
     chataround: {
         name: 'ChatAround',
         year: '2020',

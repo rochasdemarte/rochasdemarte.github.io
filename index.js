@@ -9,7 +9,8 @@ canvas.height = window.innerHeight;
 let particleArray = [];
 let particleNumber = 100;
 let trackMode = 'mouse';
-let gravity = -3.5;
+let gravity = -0.5;
+const constGravity = gravity;
 
 let firecolor = '8, 255, 90';
 let angle = 0;
@@ -20,43 +21,43 @@ let BGred = 0;
 let BGgreen = 0;
 let BGblue = 0;
 
-let fireFactor = 50;
+let fireFactor = 250;
 
 const tracker = {
   x: null,
   y: null
 }
 // - Mouse Tracker
-window.onmousemove = e => {
-  tracker.x = e.x;
-  tracker.y = e.y;
-};
-window.onmouseout = e => {
-  tracker.x = undefined;
-  tracker.y = undefined;
-};
+// window.onmousemove = e => {
+//   tracker.x = e.x;
+//   tracker.y = e.y;
+// };
+// window.onmouseout = e => {
+//   tracker.x = undefined;
+//   tracker.y = undefined;
+// };
 
 // mouse over effect
-document.querySelectorAll('.nav-btn').forEach((item, i) => {
-  item.onmouseover = e => {
-    if (darkMode) {
-      firecolor = '242,242,242';
-    } else {
-      firecolor = '8, 255, 90';
-    }
-    fireFactor = 10;
-    r = 1;
-  }
-  item.onmouseout = e => {
-    if (darkMode) {
-      firecolor = '8, 255, 90';
-    } else {
-      firecolor = '10,10,10';
-    }
-    fireFactor = 50;
-    r = 0;
-  }
-});
+// document.querySelectorAll('.nav-btn').forEach((item, i) => {
+//   item.onmouseover = e => {
+//     if (darkMode) {
+//       firecolor = '242,242,242';
+//     } else {
+//       firecolor = '8, 255, 90';
+//     }
+//     fireFactor = 10;
+//     r = 1;
+//   }
+//   item.onmouseout = e => {
+//     if (darkMode) {
+//       firecolor = '8, 255, 90';
+//     } else {
+//       firecolor = '10,10,10';
+//     }
+//     fireFactor = 50;
+//     r = 0;
+//   }
+// });
 
 // Particles class
 class Particle {
@@ -79,12 +80,12 @@ class Particle {
 
   update(t){
     //Particle lifetime
-    this.size -= 0.15;
+    this.size -= 0.05;
     this.weight -= 0.15;
     // Reset Particle
     if (this.size < 0) {
-      this.x = (t.x + ((Math.random() * 10) -5));
-      this.y = (t.y + ((Math.random() * 10) -5));
+      this.x = (((Math.random() * window.innerWidth)));
+      this.y = (((Math.random() * window.innerHeight)));
       this.size = (Math.random() * 4) + 2;
       this.weight = (Math.random() * 2) - 1;
     }
@@ -107,7 +108,7 @@ function init(){
     let y = Math.random() * canvas.height;
     let s = (Math.random() * 5) + 2;
     let c = 'rgb(250,142,42)';
-    let w = 1;
+    let w = .01;
     particleArray.push(new Particle(x, y, s, c, w));
   }
 }
@@ -140,8 +141,9 @@ function link(){
       let dist = Math.sqrt(((particleArray[a].x - particleArray[b].x) * (particleArray[a].x - particleArray[b].x))
                            + ((particleArray[a].y - particleArray[b].y) * (particleArray[a].y - particleArray[b].y)));
       if (dist < fireFactor){
-        opacity = .8 - (dist/fireFactor);
-        ctx.strokeStyle = 'rgba('+firecolor+','+opacity+')';
+        opacity = .8 - (dist/fireFactor*2);
+        let high = + (getComputedStyle(root).getPropertyValue('--high-text').slice(4).split(',')[0]);
+        ctx.strokeStyle = 'hsla(' + ((high + 3) % 360) + ', 40%, 52%,'+opacity+')';
         ctx.beginPath();
         ctx.lineWidth = 1;
         ctx.moveTo(particleArray[a].x, particleArray[a].y);

@@ -4,7 +4,7 @@
 
 :root {
   --high-text: hsl(10, 100%, 52%);
-  --low-text: rgb(243, 243, 243);
+  --low-text: rgb(230, 228, 204);
   --bg: rgb(10, 10, 10);
 }
 
@@ -41,6 +41,8 @@ h2 {
 
 h4 {
   color: var(--low-text);
+  font-weight: 100;
+  letter-spacing: .2rem;
 }
 
 h3 {
@@ -60,6 +62,16 @@ p {
   text-align: justify;
   font-weight: 100;
   font-size: 1em;
+}
+
+lang {
+  cursor: pointer;
+}
+
+lang:hover {
+  font-weight: bold;
+  font-size: 1em;
+  color: var(--high-text);
 }
 
 a {
@@ -220,6 +232,12 @@ li a:hover {
   color: var(--high-text);
 }
 
+#proj {
+  padding: 6vw 0;
+  position: relative;
+  z-index: 2;
+}
+
 .section-title-low {
   font-size: 1.4em;
   color: var(--high-text);
@@ -240,15 +258,11 @@ li a:hover {
   font-size: 2.1em;
 }
 
-#Sobre {
-
-}
-
 #contato {
   padding: 50px 50px 20vh 80px;
   color: var(--bg);
   background: var(--high-text);
-  box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.2); */
 }
 
 .contato-item {
@@ -460,6 +474,10 @@ high {
     height: 0;
   }
 
+  h1 {
+    font-size: 5em;
+  }
+
   .federacao {
     width: 10vw;
   }
@@ -535,6 +553,11 @@ high {
 
   .biofocus {
     font-size: 1.2em;
+  }
+
+  .horizontal-card,
+  .horizontal-card img {
+    height: 15vh;
   }
 
   .contato-item {
