@@ -108,6 +108,9 @@ document.querySelectorAll('.color-btn').forEach(element => {
 // Project Settings Section
 
 let projBtn = $('#signin-btn');
+projBtn.addEventListener('click', e => {
+    document.querySelector('#proj').scrollIntoView();
+});
 
 // Shuffle Array
 
