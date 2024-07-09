@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="lang.js" defer></script>
   <script src="script.js" defer></script>
-  <script src="index.js" type="text/javascript" defer></script>
+  <script src="canvas.js" type="text/javascript" defer></script>
   <script src="scroll.js" type="text/javascript" defer></script>
   <script src="work.js" type="text/javascript" defer></script>
 </head>
@@ -35,8 +35,8 @@
         <h3>Pedro<high>.</high>art<high>( )</high>;</h3>
       </a>
       <ul>
-        <li><a class="nav-btn " href="#sobre" id="nav-sobre">SOBRE</a></li>
         <li><a class="nav-btn " href="#proj" id="nav-proj">PROJETOS</a></li>
+        <li><a class="nav-btn " href="#sobre" id="nav-sobre">SOBRE</a></li>
         <li><a class="nav-btn " href="#contato" id="nav-ctt">CONTATO</a></li>
         <li><a class="nav-btn " id="nav-moon">&#9790;</a></li>
         <li><a class="nav-btn " id="nav-sun">&#9788;</a></li>
@@ -46,10 +46,10 @@
   <div class="hero-container">
     <div id="hero-title">
       <h1>Pedro <br> Rocha <br> Martin</h1>
-      <h4>
+      <!-- <h4>
         <lang>pt</lang> . <lang>en</lang> . <lang>es</lang> . <lang>fr</lang> . <lang>it</lang> . <lang>ja</lang> .
         <lang>zh</lang>
-      </h4>
+      </h4> -->
     </div>
     <div id="soon">
       <p>Desenvolvo soluções envolvendo arte e tecnologia</p>
@@ -67,7 +67,12 @@
         </path>
       </svg>
     </a>
-    <a class="nav-btn " target="_blank" href="https://www.youtube.com/channel/UCoY-wr250RsQ_FLSpoiS9iA">
+    <a class="nav-btn" target="_blank" href="https://github.com/rochasdemarte">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+        <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+      </svg>
+    </a>
+    <!-- <a class="nav-btn " target="_blank" href="https://www.youtube.com/channel/UCoY-wr250RsQ_FLSpoiS9iA">
       <svg id="youtube-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
@@ -80,7 +85,7 @@
           d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c0-.057-.045-.1-.09-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.09.094s.089-.045.104-.104l.21-1.319-.21-1.334c0-.061-.044-.09-.09-.09m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.12.119.12.061 0 .105-.061.121-.12l.254-2.474-.254-2.548c-.016-.06-.061-.12-.121-.12m.945-.089c-.075 0-.135.06-.15.135l-.193 2.64.21 2.544c.016.077.075.138.149.138.075 0 .135-.061.15-.15l.24-2.532-.24-2.623c0-.075-.06-.135-.135-.135l-.031-.017zm1.155.36c-.005-.09-.075-.149-.159-.149-.09 0-.158.06-.164.149l-.217 2.43.2 2.563c0 .09.075.157.159.157.074 0 .148-.068.148-.158l.227-2.563-.227-2.444.033.015zm.809-1.709c-.101 0-.18.09-.18.181l-.21 3.957.187 2.563c0 .09.08.164.18.164.094 0 .174-.09.18-.18l.209-2.563-.209-3.972c-.008-.104-.088-.18-.18-.18m.959-.914c-.105 0-.195.09-.203.194l-.18 4.872.165 2.548c0 .12.09.209.195.209.104 0 .194-.089.21-.209l.193-2.548-.192-4.856c-.016-.12-.105-.21-.21-.21m.989-.449c-.121 0-.211.089-.225.209l-.165 5.275.165 2.52c.014.119.104.225.225.225.119 0 .225-.105.225-.225l.195-2.52-.196-5.275c0-.12-.105-.225-.225-.225m1.245.045c0-.135-.105-.24-.24-.24-.119 0-.24.105-.24.24l-.149 5.441.149 2.503c.016.135.121.24.256.24s.24-.105.24-.24l.164-2.503-.164-5.456-.016.015zm.749-.134c-.135 0-.255.119-.255.254l-.15 5.322.15 2.473c0 .15.12.255.255.255s.255-.12.255-.27l.15-2.474-.165-5.307c0-.148-.12-.27-.271-.27m1.005.166c-.164 0-.284.135-.284.285l-.103 5.143.135 2.474c0 .149.119.277.284.277.149 0 .271-.12.284-.285l.121-2.443-.135-5.112c-.012-.164-.135-.285-.285-.285m1.184-.945c-.045-.029-.105-.044-.165-.044s-.119.015-.165.044c-.09.054-.149.15-.149.255v.061l-.104 6.048.115 2.449v.008c.008.06.03.135.074.18.058.061.142.104.234.104.08 0 .158-.044.209-.09.058-.06.091-.135.091-.225l.015-.24.117-2.203-.135-6.086c0-.104-.061-.193-.135-.239l-.002-.022zm1.006-.547c-.045-.045-.09-.061-.15-.061-.074 0-.149.016-.209.061-.075.061-.119.15-.119.24v.029l-.137 6.609.076 1.215.061 1.185c0 .164.148.314.328.314.181 0 .33-.15.33-.329l.15-2.414-.15-6.637c0-.12-.074-.221-.165-.277m8.934 3.777c-.405 0-.795.086-1.139.232-.24-2.654-2.46-4.736-5.188-4.736-.659 0-1.305.135-1.889.359-.225.09-.27.18-.285.359v9.368c.016.18.15.33.33.345h8.185C22.681 17.218 24 15.914 24 14.28s-1.319-2.952-2.938-2.952">
         </path>
       </svg>
-    </a>
+    </a> -->
   </div>
 
   <main>
@@ -156,6 +161,20 @@
           <img src="img/OSS.png" alt="">
         </div>
       </div>
+      <div class="horizontal-gallery-container">
+        <div class="horizontal-card">
+          <img src="img/ChatAround - Home.png" alt="">
+        </div>
+        <div class="horizontal-card">
+          <img src="img/MACACO 3D JQ.png" alt="">
+        </div>
+        <div class="horizontal-card">
+          <img src="img/Chatty.png" alt="">
+        </div>
+        <div class="horizontal-card">
+          <img src="img/olhosquemeviramantes.jpg" alt="">
+        </div>
+      </div>
       <br>
     </section>
     <section class="info-section" id="sobre">
@@ -183,7 +202,8 @@
       <p class="">
         Em 2008 começou sua trajetória trabalhando como montador e finalizador de vídeo. De 2013 até 2015, participa
         como assistente de direção da equipe
-        da RITO Entretenimento Inteligente, trabalhando com produções audiovisuais e direção de palco e atores.
+        da RITO Entretenimento Inteligente, trabalhando com criações artísticas, com produções audiovisuais e direção de
+        palco e atores.
         Ainda em 2015 tem início sua pesquisa em eletrônica voltada para sua produção
         artística, em paralelo a desdobramentos práticos desta pesquisa se originam alguns de seus futuros trabalhos
         onde

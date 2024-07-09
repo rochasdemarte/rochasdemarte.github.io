@@ -238,6 +238,10 @@ li a:hover {
   z-index: 2;
 }
 
+#sobre {
+  padding-bottom: 500px;
+}
+
 .section-title-low {
   font-size: 1.4em;
   color: var(--high-text);

@@ -105,6 +105,10 @@ document.querySelectorAll('.color-btn').forEach(element => {
 
 }); 
 
+// Project Settings Section
+
+let projBtn = $('#signin-btn');
+
 // Shuffle Array
 
 const shuffleArray = array => {
