@@ -441,7 +441,7 @@ high {
 }
 
 .map {
-  width: 100dvw;
+  width: 100vw;
   z-index: 99;
 }
 
@@ -627,5 +627,9 @@ high {
 
   .ctt {
     font-size: 6.2vw;
+  }
+
+  #canvas {
+    opacity: 0.6;
   }
 }
