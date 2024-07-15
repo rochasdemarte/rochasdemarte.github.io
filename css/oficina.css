@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat:wght@400&display=swap');
 
 :root {
-  --high-text: hsl(10, 100%, 52%);
-  --low-text: rgb(230, 228, 204);
+  --high-text: hsl(292, 75%, 28%);
+  --low-text: #FFEFF7;
   --bg: rgb(10, 10, 10);
 }
 
@@ -30,7 +30,7 @@ body {
 
 h1 {
   font-size: 6em;
-  color: var(--low-text);
+  color: var(--high-text);
 }
 
 h2 {
@@ -92,7 +92,7 @@ a {
 }
 
 .redes-sociais svg {
-  fill: var(--low-text);
+  fill: var(--high-text);
   width: 30px;
   margin: 0 3em;
   transition: all 0.3s;
@@ -101,11 +101,11 @@ a {
 }
 
 .redes-sociais svg:hover {
-  fill: var(--high-text);
+  fill: var(--bg);
 }
 
 #canvas {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 1;
   pointer-events: none;
@@ -232,6 +232,16 @@ li a:hover {
   color: var(--high-text);
 }
 
+.qrcode {
+  width: 200px;
+}
+
+#insc-btn-container {
+  display: ruby-text;
+  justify-content: center;
+  align-items: center;
+}
+
 #proj {
   padding: 6vw 0;
   position: relative;
@@ -239,7 +249,7 @@ li a:hover {
 }
 
 #sobre {
-  padding-bottom: 500px;
+  padding-bottom: 50px;
 }
 
 .section-title-low {
@@ -266,6 +276,7 @@ li a:hover {
   padding: 50px 50px 20vh 80px;
   color: var(--bg);
   background: var(--high-text);
+  z-index: 2;
   /* box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.2); */
 }
 
@@ -406,10 +417,41 @@ high {
 .horizontal-card:hover .gallery-title {
 
 }
+#contatext {
+  display: none;
+}
+
+#federa {
+  padding: 2vh;
+  text-align: center;
+}
+
+#federa a {
+  text-decoration: none;
+}
+
+.federacao {
+  display: inline-block;
+  margin: 0 5vw;
+  width: 10vw;
+}
+
+.apoios {
+  margin-bottom: 500px;
+}
+
+.map {
+  width: 100dvw;
+  z-index: 99;
+}
+
+#nav-moon, #nav-sun {
+  display: none;
+}
 
 ::selection {
-  background-color: var(--bg);
-  color: var(--high-text);
+  background-color: var(--high-text);
+  color: var(--bg);
 }
 
 /* width */
@@ -492,7 +534,7 @@ high {
 
   ul {
     padding-top: 40%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--bg);
     width: 100%;
     height: 100%;
   }
@@ -553,6 +595,10 @@ high {
 
   .hero-container {
     padding: 0;
+  }
+
+  #insc-btn-container {
+    display: flex;
   }
 
   #soon p {

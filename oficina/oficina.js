@@ -38,7 +38,7 @@ let orange = getComputedStyle(root).getPropertyValue('--high-text');
 let light = getComputedStyle(root).getPropertyValue('--low-text');
 let dark = getComputedStyle(root).getPropertyValue('--bg');
 
-var darkMode = true;
+var darkMode = false;
 
 // var darkMode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? true : false;
 
@@ -78,38 +78,34 @@ document.querySelectorAll('.color-btn').forEach(element => {
     let colorTimer;
     
     element.addEventListener('mouseover', () => {
-        document.querySelector('#canvas').style.display = 'block';
-        titleHome.style.setProperty('color', 'var(--high-text)');
         subtitleHome.style.setProperty('color', 'var(--high-text)');
         navBtns.forEach(el => {
-            el.style.setProperty('color', 'var(--high-text)');
+            element.style.setProperty('color', 'var(--bg)');
         });
         colorTimer = setInterval(() => {
             let high = + (orange.slice(4).split(',')[0]);
-            orange = 'hsl(' + ((high + 3) % 360) + ', 40%, 52%)';
+            orange = 'hsl(' + ((high + 3) % 360) + ', 75%, 28%)';
             root.style.setProperty('--high-text', orange);
         }, 1);
     });
 
     element.addEventListener('mouseout', () => {
-        document.querySelector('#canvas').style.display = 'none';
-        titleHome.style.setProperty('color', 'var(--low-text)');
         subtitleHome.style.setProperty('color', 'var(--low-text)');
         navBtns.forEach(el => {
-            el.style.setProperty('color', 'var(--low-text)');
+            element.style.setProperty('color', 'var(--low-text)');
         });
         clearInterval(colorTimer);
-        orange = 'hsl(10, 100%, 52%)';
+        orange = 'hsl(292, 75%, 28%)';
         root.style.setProperty('--high-text', orange);
     });
 
-});
+}); 
 
-// Project Settings Section
+// Oficina Settings Section
 
-let projBtn = $('#signin-btn');
-projBtn.addEventListener('click', e => {
-    document.querySelector('#proj').scrollIntoView();
+let oficinaBtn = $('#oficina-btn');
+oficinaBtn.addEventListener('click', e => {
+    document.querySelector('#sobre').scrollIntoView();
 });
 
 // Shuffle Array
