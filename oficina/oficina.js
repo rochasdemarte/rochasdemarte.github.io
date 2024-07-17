@@ -104,7 +104,7 @@ document.querySelectorAll('.color-btn').forEach(element => {
 // Oficina Settings Section
 
 let oficinaBtn = $('#oficina-btn');
-oficinaBtn.addEventListener('click', e => {
+oficinaBtn.addEventListener('click', () => {
     document.querySelector('#sobre').scrollIntoView();
 });
 
