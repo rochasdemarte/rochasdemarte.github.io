@@ -121,74 +121,76 @@ code {
     border-radius: 20px;
 }
 
-li, p {
+li,
+p {
     margin: 10px 0;
     line-height: 1.4em;
 }
 
 /* Aqui da uma olhada */
 
-  li a {
+li a {
     font-size: 1.5vw;
     color: var(--high-text);
     text-decoration: none;
     transition: 0.2s;
-  }
-  
+}
 
-  ::selection {
+
+::selection {
     background-color: var(--high-text);
     color: var(--bg);
-  }
-  
-  /* width */
-  ::-webkit-scrollbar {
+}
+
+/* width */
+::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     border: 1px solid var(--bg);
     box-shadow: inset 0 0 5px var(--bg);
     background: var(--bg);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: var(--high-text);
     border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: var(--low-text);
-  }
-  
-  /* Highlight Code */
+}
 
-  .hljs-keyword {
+/* Highlight Code */
+
+.hljs-keyword {
     color: #3759b6;
-  }
+}
 
-  .hljs-regexp, .hljs-comment {
+.hljs-regexp,
+.hljs-comment {
     color: rgb(104, 164, 43);
-  }
+}
 
-  .hljs-string {
+.hljs-string {
     color: rgb(97, 30, 159);
-  }
+}
 
-  .hljs-built_in {
+.hljs-built_in, .hljs-title {
     color: chocolate;
-  }
+}
 
-  .hljs-number {
+.hljs-number {
     color: rgb(187, 16, 99);
-  }
+}
 
-  /* Collapsble */
+/* Collapsble */
 
-  .collapsible {
+.collapsible {
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -198,27 +200,28 @@ li, p {
     outline: none;
     color: var(--low-text);
     background-color: rgba(0, 0, 0, 0);
-  }
-  
-  .active, .collapsible:hover {
+}
+
+.active,
+.collapsible:hover {
     color: var(--high-text);
-  }
-  
-  .collapsible:after {
+}
+
+.collapsible:after {
     content: '\002B';
     color: var(--high-text);
     font-weight: bold;
     float: right;
     margin-left: 5px;
-  }
-  
-  .active:after {
+}
+
+.active:after {
     content: "\2212";
-  }
-  
-  .content {
+}
+
+.content {
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-  }
+}

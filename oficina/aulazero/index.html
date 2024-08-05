@@ -18,23 +18,24 @@
     <section class="h3-container">
         <button class="collapsible">MENU</button>
         <section class="content">
-            <h3 id="introdu-o">Introdução</h3>
-            <h3 id="come-ando-com-processing">Começando com Processing</h3>
-            <h3 id="conceitos-b-sicos-de-desenho">Conceitos Básicos de Desenho</h3>
-            <h3 id="trabalhando-com-vari-veis">Trabalhando com Variáveis</h3>
-            <h3 id="aleatoriedade">Interação e Aleatoriedade</h3>
-            <h3 id="condicoes">Condições</h3>
-            <h3 id="la-os">Laços de Repetição</h3>
-            <h3 id="listas">Arrays</h3>
-            <h3 id="exerc-cio-0">Exercício 0</h3>
-            <h3 id="fun-es">Funções</h3>
-            <h3 id="exercicio-1">Exercício 1</h3>
-            <h3 id="programa-o-orientada-a-objetos-oop-">Programação Orientada a Objetos - OOP</h3>
-            <h3 id="projetos-e-encerramento">Projetos e Encerramento</h3>
-            <h3 id="conclus-o">Conclusão</h3>
+            <h3 class="menu-item" id="introdu-o">Introdução</h3>
+            <h3 class="menu-item" id="come-ando-com-processing">Começando com Processing</h3>
+            <h3 class="menu-item" id="conceitos-b-sicos-de-desenho">Conceitos Básicos de Desenho</h3>
+            <h3 class="menu-item" id="trabalhando-com-vari-veis">Trabalhando com Variáveis</h3>
+            <h3 class="menu-item" id="aleatoriedade">Interação e Aleatoriedade</h3>
+            <h3 class="menu-item" id="condicoes">Condições</h3>
+            <h3 class="menu-item" id="la-os">Laços de Repetição</h3>
+            <h3 class="menu-item" id="exe-0">Exercício 0</h3>
+            <h3 class="menu-item" id="exe-1">Exercício 1</h3>
+            <h3 class="menu-item" id="exe-2">Exercício 2</h3>
+            <!-- <h3 class="menu-item" id="listas">Arrays</h3>
+            <h3 class="menu-item" id="fun-es">Funções</h3>
+            <h3 class="menu-item" id="programa-o-orientada-a-objetos-oop-">Programação Orientada a Objetos - OOP</h3> -->
+            <h3 class="menu-item" id="projetos-e-encerramento">Projetos e Encerramento</h3>
+            <h3 class="menu-item" id="conclus-o">Conclusão</h3>
         </section>
     </section>
-    <div>
+    <div class="section-item">
         <h2 id="intro">Introdução</h2>
         <ul>
             <li>
@@ -82,39 +83,43 @@
             </li>
         </ul>
     </div>
-    <div>
+    <div class="section-item">
         <h2 id="start-processing">Começando com Processing</h2>
         <ul>
             <li>
-                <p>Baixar Processing em <a href="https://processing.org/download">processing.org</a> para seu sistema
+                <p>Baixe o instalador do Processing em <a href="https://processing.org/download">processing.org</a> para
+                    seu sistema
                     operacional.</p>
             </li>
             <li>
-                <p>Instale e inicie o IDE do Processing.</p>
+                <p>Instale e inicie o Processing.</p>
             </li>
             <li>
-                <p>Visão geral da interface.</p>
+                <p>Agora, analise a visão geral da interface do programa conforme vimos seus detalhes em aula.</p>
             </li>
             <li>
-                <p>Escrevendo e salvando código em arquivos PDE.</p>
+                <p>Lembre-se de ir escrevendo e salvando o seu código. O processing salva os seus sketchs de projetos em
+                    arquivos <strong>PDE</strong>, um formato próprio da linguagem.</p>
             </li>
             <li>
-                <p>Consultando a documentação de referência do Processing em <a href="https://processing.org/reference">processing.org/reference</a>.</p>
+                <p>Caso haja alguma dúvida, não exite em consultar a documentação de referência oficial do Processing em
+                    <a href="https://processing.org/reference">processing.org/reference</a>.
+                </p>
             </li>
         </ul>
     </div>
-    <div>
+    <div class="section-item">
         <h2 id="conceitos-de-desenho">Conceitos Básicos de Desenho</h2>
         <p><strong>Plano Cartesiano no Processing</strong></p>
         <ul>
             <li>
-                <p>Coordenadas de gráficos de computador: O canto superior esquerdo é (0, 0);</p>
+                <p>Nas coordenadas de gráficos de computador o canto superior esquerdo é lido como (0, 0);</p>
             </li>
             <li>
-                <p>X positivo é à direita</p>
+                <p>Os valores de X crescem de forma positiva para a direita</p>
             </li>
             <li>
-                <p>Y positivo é para baixo.</p>
+                <p>E os valores de Y crescem de forma positiva para baixo.</p>
             </li>
         </ul>
         <p><strong>Comandos de exemplo:</strong></p>
@@ -170,8 +175,11 @@
 <span class="hljs-built_in">textAlign</span>(RIGHT);
 <span class="hljs-built_in">text</span>(texto, x, y);
         </code></pre>
-        <p>Você ainda pode trocar de fonte, o arquivo da fonte desejada deve estar localizada em uma pasta de nome
-            &#39;data&#39; no mesmo local do sketch:</p>
+        <p>Você ainda pode trocar de fonte, o arquivo da fonte desejada deve ser criado pela aba de
+            <strong>Ferramentas</strong> do procesing em <strong>"Criar Fontes..."</strong>, e estar localizada em uma
+            pasta de nome
+            <strong>data</strong> no mesmo local do projeto:
+        </p>
         <pre><code class="lang-Processing"><span class="hljs-keyword">PFont</span> font;
 <span class="hljs-comment">// a fonte deve estar localizada na pasta "data".</span>
 font = <span class="hljs-built_in">loadFont</span>(<span class="hljs-string">"LetterGothicStd.otf"</span>);
@@ -188,8 +196,8 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
         <p>Use <code>textWidth</code> para saber o tamanho horizontal do texto desejado:</p>
         <pre><code class="lang-Processing"><span class="hljs-built_in">textSize</span>(<span class="hljs-number">112</span>);
 <span class="hljs-comment">// uso da função textWidth() para descobrir a largura da variável 'c'</span>
-<span class="hljs-built_in">char</span> c = <span class="hljs-string">'T'</span>;
-<span class="hljs-built_in">float</span> cw = <span class="hljs-built_in">textWidth</span>(c);
+<span class="hljs-keyword">char</span> c = <span class="hljs-string">'T'</span>;
+<span class="hljs-keyword">float</span> cw = <span class="hljs-built_in">textWidth</span>(c);
 <span class="hljs-built_in">text</span>(c, <span class="hljs-number">0</span>, <span class="hljs-number">160</span>);
 <span class="hljs-built_in">line</span>(cw, <span class="hljs-number">0</span>, cw, <span class="hljs-number">200</span>); 
 <span class="hljs-comment">// uso da função textWidth() para descobrir a largura da variável 's'</span>
@@ -220,7 +228,7 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
 
     </div>
 
-    <div>
+    <div class="section-item">
 
         <h2 id="variables">Trabalhando com Variáveis</h2>
         <p><strong>Tipos de Variáveis</strong></p>
@@ -241,7 +249,8 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
                 <p>Booleano: <code>boolean</code></p>
             </li>
         </ul>
-        <p>Elas armazenam valores de dados como coordenadas, tamanhos, cores, etc.</p>
+        <p>Esses são alguns tipos de variáveis nativas da linguagem que utilizamos no Processing. Elas podem armazenar
+            valores de dados como coordenadas, tamanhos, cores, etc.</p>
 
         <br><br>
         <p><strong>Atribuição e Uso</strong></p>
@@ -253,19 +262,41 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
                 <p>Exemplos de uso:</p>
                 <ul>
                     <li>Movendo um círculo com <code>x = x + 1;</code> ou de uma forma resumida <code>x += 1;</code>
-                        para
-                        animar
-                        sua posição.</li>
+                        para animar sua posição.</li>
                     <li>Determinando paramentros de funções <code>rect(x, y, size, size);</code></li>
                 </ul>
             </li>
         </ul>
+        <pre><code class="lang-Processing"><span class="hljs-built_in">int</span> x = <span class="hljs-number">0</span>;
+<span class="hljs-built_in">int</span> y = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">400</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">circle</span>(x, y, <span class="hljs-comment">50</span>);
+  x += <span class="hljs-number">1</span>;
+  y += <span class="hljs-number">1</span>;
+}
+</code></pre>
         <p><strong>Escopo de Variáveis</strong></p>
         <ul>
             <li>Variáveis Globais vs. Locais</li>
-        </ul>
-        <p><strong>Variáveis Internas</strong></p>
+        </ul><br>
+        <p>As variáveis seguem um sistema de escopo, ou seja, elas podem ter seu valor conhecido globalbente ou
+            localmente.</p>
+        <p>Se declararmos variáveis dentro de funções, elas vão ter seus valores conhecidos apenas por aquela função, de
+            forma local.</p>
+        <p>Agora, se fizermos a declaração de uma variável fora do escopo de alguma função, seu valor vai ser global, e
+            poderá ser acessado de qualquer lugar, ou função.</p>
+        <br><br>
         <h3 id="interatividade">Interatividade</h3>
+        <p><strong>Variáveis Internas</strong></p>
+        <p>Processing possui algumas variáveis já criadas em seu sistema, e nós podemos acessá-las para nos utilizar-mos
+            de seus valores ao criar interações em nossos projetos.</p>
+        <p>Já conhecemos algumas delas, e aqui vão alguns exemplos de variáveis que já vimos e que iremos ver ao longo
+            do curso:</p>
         <ul>
             <li>
                 <p><code>mouseX</code> e <code>mouseY</code> para posição do mouse.</p>
@@ -284,72 +315,263 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
             </li>
         </ul>
     </div>
-    <div>
+    <div class="section-item">
         <h2 id="aleatori">Interação e Aleatoriedade</h2>
         <p><strong>Função Random</strong></p>
         <ul>
             <li>
-                <p>Use <code>random(min, max)</code> para gerar valores aleatórios.</p>
-            </li>
-            <li>
-                <p>Valores aleatórios podem ser atribuídos a posições, tamanhos, cores, etc.</p>
+                <p>Use <code>random(max)</code> e <code>random(min, max)</code> para gerar valores aleatórios.</p>
             </li>
         </ul>
         <p><strong>Função de Seno e Cosseno</strong></p>
         <ul>
             <li>
-                <p>Use <code>random(min, max)</code> para gerar valores aleatórios.</p>
+                <p>Use <code>sin(angulo)</code> e <code>cos(angulo)</code> para gerar valores oscilantes de -1 até 1.
+                </p>
             </li>
+            <br>
             <li>
-                <p>Valores aleatórios podem ser atribuídos a posições, tamanhos, cores, etc.</p>
+                <p>Valores aleatórios e oscilantes geram valores do tipo <code>float</code>, e podem ser atribuídos a
+                    posições, tamanhos, cores, etc.</p>
             </li>
         </ul>
     </div>
-    <div>
+    <div class="section-item">
         <h2 id="if-condition">Condições</h2>
         <p><strong>Estruturas de Controle</strong></p>
         <ul>
-            <li>Declarações if, else para lógica de condições.</li>
+            <li>Declarações if e else são usados para criação de lógica de condições. Onde verificamos se tal condição é
+                verdadeira ou falsa, e executamos comandos de acordo com o seu resultado.</li>
+            <li>Podemos usar variáveis booleanas ou operações matemáticas como condição das estruturas <code>if</code>
+            </li>
         </ul>
-        <pre><code class="lang-Processing"><span class="hljs-keyword">if</span> (x &gt; y){
-  <span class="hljs-regexp">// Aqui vai o código que será executado caso passe pela condição do <span class="hljs-string">'if'</span></span>
-    x = x + <span class="hljs-number">5</span>;
+        <pre><code class="lang-Processing"><span class="hljs-built_in">int</span> x = <span class="hljs-number">50</span>;
+<span class="hljs-built_in">int</span> y = <span class="hljs-number">0</span>;
+
+<span class="hljs-keyword">if</span> (x &gt; y){
+  <span class="hljs-regexp">// Aqui vai o código que será executado caso a condição do <span class="hljs-string">'if'</span> seja verdadeira.</span>
+    x = x - <span class="hljs-number">5</span>;
+} <span class="hljs-keyword">else </span>{
+    <span class="hljs-regexp">// Aqui vai o código que será executado caso a condição do <span class="hljs-string">'if'</span> seja falsa.</span>
+    x = <span class="hljs-number">50</span>;
 }
     </code></pre>
     </div>
-    <div>
+    <div class="section-item">
         <h2 id="loops">Laços de Repetição</h2>
         <ul>
             <li>Para iteração em variáveis e repetições usamos laços <code>for</code> e <code>while</code>.</li>
+            <li>Todo laço de repetição é composto por uma <strong>declaração</strong> de variável, uma
+                <strong>condição</strong> para que ele aconteça, e por fim, uma <strong>incrementação</strong> na
+                variável usada.
+            </li>
         </ul>
         <pre><code class="lang-Processing"><span class="hljs-comment">// Em Java, existem duas principais formas de iterar com laços de repetição.</span>
     
-    <span class="hljs-comment">// Com while loops:</span>
-    
-    <span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">320</span>) {
-      line(<span class="hljs-number">120</span>, i, <span class="hljs-number">320</span>, i);
-      i = i + <span class="hljs-number">20</span>;
-    }
-    
-    <span class="hljs-comment">// E com for loops:</span>
-    
-    <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">320</span>; j = j+<span class="hljs-number">20</span>) {
-      line(<span class="hljs-number">120</span>, j, <span class="hljs-number">320</span>, j);
-    }
-    </code></pre>
+<span class="hljs-comment">// Com while loops:</span>
+
+<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">320</span>) {
+    line(<span class="hljs-number">120</span>, i, <span class="hljs-number">320</span>, i);
+    i = i + <span class="hljs-number">20</span>;
+}
+
+<span class="hljs-comment">// E com for loops:</span>
+
+<span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">320</span>; j = j+<span class="hljs-number">20</span>) {
+    line(<span class="hljs-number">120</span>, j, <span class="hljs-number">320</span>, j);
+}
+</code></pre>
         <p>Podemos ter loops dentro de outros loops, chamados nested loops.
-        <br>Eles são usados para iterar em mais de uma dimensão, por exemplo:</p>
+            <br>Eles são usados para iterar em mais de uma dimensão, por exemplo:
+        </p>
         <pre><code class="lang-Processing"><span class="hljs-comment">// Para cada valor da variável 'i' passamos por todos os valores da variável 'j'.</span>
-    
-    <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">120</span>; i &lt; <span class="hljs-number">320</span>; i = i+<span class="hljs-number">20</span>) {
-      <span class="hljs-keyword">for</span> (int j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">320</span>; j = j+<span class="hljs-number">20</span>) {
-        point(i, j);
-      }
-    }
-    </code></pre>
+
+<span class="hljs-built_in">strokeWeight</span>(<span class="hljs-number">10</span>);
+
+<span class="hljs-keyword">for</span> (int i = <span class="hljs-number">120</span>; i &lt; <span class="hljs-number">320</span>; i = i+<span class="hljs-number">20</span>) {
+  <span class="hljs-keyword">for</span> (int j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">320</span>; j = j+<span class="hljs-number">20</span>) {
+    point(i, j);
+  }
+}
+</code></pre>
     </div>
-    <div>
+    <div class="section-item">
+        <h2 id="exerc-cio-1-">Exercício 0</h2>
+        <h3 id="draw-board">Rastro de Desenho</h3>
+        <p>Primeiro, vamos configurar as estruturas de controle <code>setup</code> e <code>draw</code> do nosso
+            programa.</p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+
+}
+</code></pre>
+        <p>Agora, dentro da função <code>setup</code>, vamos configurar o tamanho da nossa janela com a função
+            <code>size()</code>. Vamos escolher um tamanho inicial padrão, onde a largura será igual a
+            altura da janela.
+        </p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">600</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+
+}
+</code></pre>
+        <p>Escolha uma das formas geométricas aprendidas em aula, e utilize sua função respectiva para desenhá-la no
+            centro da tela, e com o valor de um décimo da largura da tela nas dimensões de largura e altura.</p>
+        <p>O comando para desenhar a forma escolhida deve estar dentro de <code>draw</code>.</p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">600</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">ellipse</span>(<span class="hljs-keyword">width</span>/2, <span class="hljs-keyword">height</span>/2, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>);
+}
+</code></pre>
+        <p>Agora vamos experimentar um pouco com o que já aprendemos.</p>
+        <p>Altere os parametros de posição da forma escolhida, para que ela esteja sempre posicionada na mesma posição
+            do <strong>mouse</strong></p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">600</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">ellipse</span>(<span class="hljs-keyword">mouseX</span>, <span class="hljs-keyword">mouseY</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>);
+}
+</code></pre>
+        <p>Vamos continuar experimentando. Conforme podemos perceber, quando não renderizamos um plano de fundo, a cada
+            frame é desenhada a forma escolhida, causando o efeito de traçado, possibilitando a criação do rastro do
+            mouse por onde a forma passou.</p>
+        <p>Continuando com o exercício, escolha uma cor para o preenchimento da forma utilizando a função
+            <code>fill()</code>, e retire o contorno dela com a função <code>noStroke()</code>.
+        </p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">600</span>);
+  <span class="hljs-built_in">noStroke</span>();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">fill</span>(<span class="hljs-number">10</span>, <span class="hljs-number">24</span>, <span class="hljs-number">200</span>);
+  <span class="hljs-built_in">ellipse</span>(<span class="hljs-keyword">mouseX</span>, <span class="hljs-keyword">mouseY</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>);
+}
+</code></pre>
+        <p>Crie uma nova forma geométrica, identica à forma já criada. Mantenha as duas formas sendo desenhadas, porém,
+            na nova forma vamos inverter os parametros de posição <strong>x</strong> e <strong>y</strong>. Assim, o
+            parametro <strong>x</strong> da primeira forma será igual ao parametro <strong>y</strong> da segunda forma,
+            e o parametro <strong>y</strong> da primeira forma será igual ao parametro <strong>x</strong> da segunda
+            forma</p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">600</span>);
+  <span class="hljs-built_in">noStroke</span>();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">fill</span>(<span class="hljs-number">10</span>, <span class="hljs-number">24</span>, <span class="hljs-number">200</span>);
+  <span class="hljs-built_in">ellipse</span>(<span class="hljs-keyword">mouseX</span>, <span class="hljs-keyword">mouseY</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>);
+  <span class="hljs-built_in">ellipse</span>(<span class="hljs-keyword">mouseY</span>, <span class="hljs-keyword">mouseX</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>);
+}
+</code></pre>
+        <p>Podemos perceber a criação de um padrão espelhado na posição das formas. Mas de acordo com a movimentação do
+            mouse, logo a tela fica completamente colorida pelas formas e não percebemos mais seu traçado.</p>
+        <p>Para resolver isso, vamos criar um fundo com uma opacidade levemente transparente. Já vimos em aula que a
+            função padrão para gerar fundos é a <code>background()</code>, porém, não podemos utilizar transparência com
+            ela.<br><br>Para resolvermos essa tarefa, vamos utilizar a função de forma geométrica <code>rect()</code>, criando
+            um retângulo que tenha o tamanho da tela inteira, em sua largura e altura. E para criarmos a sua
+            transparência, vamos utilizar a função <code>fill()</code> com os valores de cor e alpha.</p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">600</span>);
+  <span class="hljs-built_in">noStroke</span>();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">fill</span>(<span class="hljs-number">10</span>, <span class="hljs-number">24</span>, <span class="hljs-number">200</span>);
+  <span class="hljs-built_in">ellipse</span>(<span class="hljs-keyword">mouseX</span>, <span class="hljs-keyword">mouseY</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>);
+  <span class="hljs-built_in">ellipse</span>(<span class="hljs-keyword">mouseY</span>, <span class="hljs-keyword">mouseX</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">10</span>);
+
+  <span class="hljs-built_in">fill</span>(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
+  <span class="hljs-built_in">rect</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">width</span>, <span class="hljs-keyword">height</span>);
+}
+</code></pre>
+        <p>Agora experimente livremente, por exemplo alterando os parametros do código criado ou adicionando mais formas ou cores.</p>
+        <p>A melhor forma de aprendermos é testando nossos conhecimentos e ideias.</p>
+    </div>
+    <div class="section-item">
+        <h2 id="exerc-cio-1-">Exercício 1</h2>
+        <h3 id="draw-board">Grade de Repetição</h3>
+        <p>Disponível a partir do dia 06 de Agosto as 17h</p>
+        <!-- <p>Primeiro, vamos configurar as estruturas de controle <code>setup</code> e <code>draw</code> do nosso
+            programa.</p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+
+}
+</code></pre>
+        <p>Agora, dentro da função <code>setup</code>, vamos configurar o tamanho da nossa janela com a função
+            <code>size()</code>. Vamos escolher um tamanho inicial padrão, onde a largura será um pouco maior que a
+            altura da janela.
+        </p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">400</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+
+}
+</code></pre> -->
+    </div>
+    <div class="section-item">
+        <h2 id="exerc-cio-0">Exercício 2</h2>
+        <h3 id="tile-map">Tile Map</h3>
+        <p>Disponível a partir do dia 07 de Agosto as 17h</p>
+        <!-- <p>Primeiro, vamos configurar o tamanho da nossa janela com a função <code>size()</code>. Vamos escolher um
+            tamanho
+            inicial padrão, de valor igual para a largura e a altura da janela.</p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre
+            class="content"><code class="lang-Processing"><span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);</code></pre>
+        <p>Agora, crie uma linha com a função <code>line()</code> que vá do canto superior esquerdo da tela até o canto
+            inferior
+            direito.</p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing"><span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
+
+<span class="hljs-built_in">line</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>);
+    </code></pre>
+        <p>Após isso, crie uma variável booleanae e atribua a ela o valor: <code>random(1) &gt;= 0.5</code></p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing"><span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
+
+<span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
+
+<span class="hljs-built_in">line</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>);
+        </code></pre> -->
+    </div>
+    <!-- <div class="section-item">
         <h2 id="listas">Arrays</h2>
         <p>Arrays são listas de dados, usamos para guardar elementos e valores de forma indexada em uma única variável.
             Os
@@ -386,41 +608,22 @@ int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-
     }
     </code></pre>
     </div>
-    <div>
-        <h2 id="exerc-cio-0">Exercício 0</h2>
-        <h3 id="tile-map">Tile Map</h3>
-        <p>Primeiro, vamos configurar o tamanho da nossa janela com a função <code>size()</code>. Vamos escolher um
-            tamanho
-            inicial padrão, de valor igual para a largura e a altura da janela.</p>
-        <p class="collapsible">Código Exemplo:</p>
-        <pre class="content"><code class="lang-Processing">size(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);</code></pre>
-        <p>Agora, crie uma linha com a função <code>line()</code> que vá do canto superior esquerdo da tela até o canto
-            inferior
-            direito.</p>
-        <p class="collapsible">Código Exemplo:</p>
-        <pre class="content"><code class="lang-Processing">size(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
-<span class="hljs-built_in">line</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>);
-    </code></pre>
-        <p>Após isso, crie uma variável booleanae e atribua a ela o valor: <code>random(1) &gt;= 0.5</code></p>
-        <pre><code class="lang-Processing"><span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
-    </code></pre>
-    </div>
-
-    <div>
+    <div class="section-item">
         <h2 id="func">Funções</h2>
         <p><strong>Funções internas da línguagem</strong></p>
         <p>Ao longo da aula, já conhecemos e usamos algumas funções próprias da línguagem:</p>
-        <pre><code class="lang-Processing">size()<span class="hljs-comment">;</span>
-    print()<span class="hljs-comment">;</span>
-    sin()<span class="hljs-comment">;</span>
-    cos()<span class="hljs-comment">;</span>
-    <span class="hljs-built_in">random</span>()<span class="hljs-comment">;</span>
-    rect()<span class="hljs-comment">;</span>
-    line()<span class="hljs-comment">;</span>
-    <span class="hljs-keyword">background();
-    </span>map()<span class="hljs-comment">;</span>
-    int()<span class="hljs-comment">;</span>
-    </code></pre>
+        <pre><code class="lang-Processing">
+size()<span class="hljs-comment">;</span>
+print()<span class="hljs-comment">;</span>
+sin()<span class="hljs-comment">;</span>
+cos()<span class="hljs-comment">;</span>
+<span class="hljs-built_in">random</span>()<span class="hljs-comment">;</span>
+rect()<span class="hljs-comment">;</span>
+line()<span class="hljs-comment">;</span>
+<span class="hljs-keyword">background();
+</span>map()<span class="hljs-comment">;</span>
+int()<span class="hljs-comment">;</span>
+</code></pre>
         <p><strong>Definindo e Usando Funções</strong></p>
         <ul>
             <li>
@@ -442,11 +645,7 @@ int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-
             </li>
         </ul>
     </div>
-    <div>
-        <h2 id="exerc-cio-1-">Exercício 1:</h2>
-    </div>
-
-    <div>
+    <div class="section-item">
         <h2 id="oop-">Programação Orientada a Objetos - OOP</h2>
         <p><strong>Classes e Objetos</strong></p>
         <ul>
@@ -507,24 +706,25 @@ int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-
       vectors[i] = <span class="hljs-keyword">new</span> <span class="hljs-type">PVector</span>();
     }
     </code></pre>
-    </div>
+    </div> -->
 
-    <div>
+    <div class="section-item">
         <h2 id="projeto-final">Projetos e Encerramento</h2>
-        <p><strong>Mini-Projetos</strong></p>
+        <br>
+        <p><strong>Mini-Projeto</strong></p>
         <ul>
-            <li>Exemplo: Criar um elemento visual na tela, interagindo com variáveis em seus parâmetros, criando funções
-                e
-                usando as funções internas da linguagem, unindo todo o conhecimento da aula de hoje que puder colocar.
+            <li>Criar livremente um elemento visual na tela, interagindo com variáveis em seus parâmetros, usando as
+                funções
+                internas da linguagem, unindo todo o conhecimento da aula de hoje que puder colocar.
+            </li>
+            <li>
+                Queremos ver o que você experimente com a sua criatividade e use o que já absorveu das proposições para
+                executar esse exercício.
             </li>
         </ul>
+        <br><br>
         <p><strong>Desafios e Aprendizado Adicional</strong></p>
         <ul>
-            <li>
-                <p>Exercícios sugeridos para ampliar habilidades: Criar múltiplos elementos com o uso de classes e
-                    orientação de
-                    objetos.</p>
-            </li>
             <li>
                 <p>Agora, eu te incentivo a explorar tópicos mais avançados e recursos comunitários como fóruns e
                     exemplos
@@ -532,24 +732,30 @@ int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-
                     sketchs da comunidade de artistas e desenvolvedores no <a
                         href="https://openprocessing.org/discover/">OpenProcessing</a>.</p>
             </li>
+            <!-- <li>
+                <p>Exercícios sugeridos para ampliar habilidades: Criar múltiplos elementos com o uso de classes e
+                    orientação de
+                    objetos.</p>
+            </li> -->
         </ul>
     </div>
 
-    <div>
+    <div class="section-item">
         <h2 id="conclusao">Conclusão</h2>
         <p><strong>Próximos Passos e Aprendizado Futuro</strong></p>
         <ul>
             <li>
-                <p>Na próxima aula veremos como manipular imagens e vídeos, através de seus pixels e outros parâmetros.
+                <p>Na próxima aula veremos como criar nossas próprias funções e como manipular imagens e vídeos, através
+                    de seus pixels e outros parâmetros.
                 </p>
             </li>
-            <li>
+            <!-- <li>
                 <p>Vamos explorar recursos sonoras, criando e manipulando ondas sonoras e suas propriedades.</p>
             </li>
             <li>
                 <p>Vamos iniciar os conhecimentos em P5js, levando toda a capacidade do Processing para as redes online.
                 </p>
-            </li>
+            </li> -->
         </ul>
     </div>
     <hr>

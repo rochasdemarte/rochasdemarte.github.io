@@ -8,7 +8,16 @@ for (i = 0; i < coll.length; i++) {
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
         } else {
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.maxHeight = content.scrollHeight + 100 + "px";
         }
     });
 }
+
+var menuItens = document.querySelectorAll(".menu-item");
+var sectionItens = document.querySelectorAll(".section-item");
+
+menuItens.forEach((e, i) => {
+    e.addEventListener('click', () => {
+        sectionItens[i].scrollIntoView();
+    });
+});
