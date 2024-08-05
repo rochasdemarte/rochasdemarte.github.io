@@ -399,12 +399,31 @@ high {
   filter: none;
 }
 
-.gallery-title {
-  transition: all 1.4s 0.8s;
+.work-label {
+  transition: all 0.4s;
+  z-index: 3;
+  pointer-events: none;
+  width: 100%;
+  padding: 100px;
 }
 
-.horizontal-card:hover .gallery-title {
+.work-label h1 {
 
+}
+
+.work-label p {
+  font-size: 2.6em;
+  margin: 25px 0;
+}
+
+.work-label span {
+  font-weight: 900;
+  color: var(--high-text);
+  font-size: 2em;
+}
+
+.work-label-tags {
+  float: right;
 }
 
 ::selection {
