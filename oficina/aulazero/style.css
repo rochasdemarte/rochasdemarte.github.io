@@ -202,6 +202,12 @@ li a {
     background-color: rgba(0, 0, 0, 0);
 }
 
+p.collapsible {
+    border: solid 2px #5882FA;
+    border-radius: 20px;
+    text-align: center;
+}
+
 .active,
 .collapsible:hover {
     color: var(--high-text);
@@ -224,4 +230,10 @@ li a {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient( rgba(88,130,250,1), rgba(97,30,159,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

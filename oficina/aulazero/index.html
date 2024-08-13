@@ -25,12 +25,12 @@
             <h3 class="menu-item" id="aleatoriedade">Interação e Aleatoriedade</h3>
             <h3 class="menu-item" id="condicoes">Condições</h3>
             <h3 class="menu-item" id="la-os">Laços de Repetição</h3>
+            <h3 class="menu-item" id="listas">Arrays</h3>
+            <h3 class="menu-item" id="fun-es">Funções</h3>
+            <h3 class="menu-item" id="programa-o-orientada-a-objetos-oop-">Programação Orientada a Objetos - OOP</h3>
             <h3 class="menu-item" id="exe-0">Exercício 0</h3>
             <h3 class="menu-item" id="exe-1">Exercício 1</h3>
             <h3 class="menu-item" id="exe-2">Exercício 2</h3>
-            <!-- <h3 class="menu-item" id="listas">Arrays</h3>
-            <h3 class="menu-item" id="fun-es">Funções</h3>
-            <h3 class="menu-item" id="programa-o-orientada-a-objetos-oop-">Programação Orientada a Objetos - OOP</h3> -->
             <h3 class="menu-item" id="projetos-e-encerramento">Projetos e Encerramento</h3>
             <h3 class="menu-item" id="conclus-o">Conclusão</h3>
         </section>
@@ -202,7 +202,7 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
 <span class="hljs-built_in">line</span>(cw, <span class="hljs-number">0</span>, cw, <span class="hljs-number">200</span>); 
 <span class="hljs-comment">// uso da função textWidth() para descobrir a largura da variável 's'</span>
 <span class="hljs-keyword">String</span> s = <span class="hljs-string">"Tokyo"</span>;
-<span class="hljs-built_in">float</span> sw = <span class="hljs-built_in">textWidth</span>(s);
+<span class="hljs-keyword">float</span> sw = <span class="hljs-built_in">textWidth</span>(s);
 <span class="hljs-built_in">text</span>(s, <span class="hljs-number">0</span>, <span class="hljs-number">340</span>);
 <span class="hljs-built_in">line</span>(sw, <span class="hljs-number">200</span>, sw, <span class="hljs-number">400</span>);
         </code>
@@ -267,15 +267,15 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
                 </ul>
             </li>
         </ul>
-        <pre><code class="lang-Processing"><span class="hljs-built_in">int</span> x = <span class="hljs-number">0</span>;
-<span class="hljs-built_in">int</span> y = <span class="hljs-number">0</span>;
+        <pre><code class="lang-Processing"><span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">int</span> y = <span class="hljs-number">0</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
   <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">400</span>);
 }
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
-  <span class="hljs-built_in">circle</span>(x, y, <span class="hljs-comment">50</span>);
+  <span class="hljs-built_in">circle</span>(x, y, <span class="hljs-number">50</span>);
   x += <span class="hljs-number">1</span>;
   y += <span class="hljs-number">1</span>;
 }
@@ -372,14 +372,14 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
 
 <span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>;
 <span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">320</span>) {
-    line(<span class="hljs-number">120</span>, i, <span class="hljs-number">320</span>, i);
+    <span class="hljs-keyword">line</span>(<span class="hljs-number">120</span>, i, <span class="hljs-number">320</span>, i);
     i = i + <span class="hljs-number">20</span>;
 }
 
 <span class="hljs-comment">// E com for loops:</span>
 
 <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">320</span>; j = j+<span class="hljs-number">20</span>) {
-    line(<span class="hljs-number">120</span>, j, <span class="hljs-number">320</span>, j);
+    <span class="hljs-keyword">line</span>(<span class="hljs-number">120</span>, j, <span class="hljs-number">320</span>, j);
 }
 </code></pre>
         <p>Podemos ter loops dentro de outros loops, chamados nested loops.
@@ -389,12 +389,149 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
 
 <span class="hljs-built_in">strokeWeight</span>(<span class="hljs-number">10</span>);
 
-<span class="hljs-keyword">for</span> (int i = <span class="hljs-number">120</span>; i &lt; <span class="hljs-number">320</span>; i = i+<span class="hljs-number">20</span>) {
-  <span class="hljs-keyword">for</span> (int j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">320</span>; j = j+<span class="hljs-number">20</span>) {
-    point(i, j);
+<span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">120</span>; i &lt; <span class="hljs-number">320</span>; i = i+<span class="hljs-number">20</span>) {
+  <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">320</span>; j = j+<span class="hljs-number">20</span>) {
+    <span class="hljs-keyword">point</span>(i, j);
   }
 }
 </code></pre>
+    </div>
+    <div class="section-item">
+        <h2 id="listas">Arrays</h2>
+        <p>Arrays são listas de dados, usamos para guardar elementos e valores de forma indexada em uma única variável.
+            Os
+            seus
+            indexes começam a contar a partir de &#39;0&#39; seguindo a ordem numérica &#39;0, 1, 2, 3,...&#39; e assim
+            por
+            diante, de acordo com o tamanho da array.</p>
+        <ul>
+            <li>Criar e usar arrays para armazenar múltiplos pontos de dados.</li>
+        </ul>
+        <pre><code class="lang-Processing">int[] numbers = new int[<span class="hljs-number">3</span>]; <span class="hljs-comment">// declara a variável 'numbers' contendo três elementos</span>
+
+numbers[<span class="hljs-number">0</span>] = <span class="hljs-number">90</span>;  <span class="hljs-comment">// atribui ao primeiro elemento</span>
+numbers[<span class="hljs-number">1</span>] = <span class="hljs-number">150</span>; <span class="hljs-comment">// atribui ao segundo elemento</span>
+numbers[<span class="hljs-number">2</span>] = <span class="hljs-number">30</span>;  <span class="hljs-comment">// atribui ao terceiro elemento</span>
+    
+int a = numbers[<span class="hljs-number">0</span>] + numbers[<span class="hljs-number">1</span>]; <span class="hljs-comment">// atribui à variável 'a' o valor de 240</span>
+int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-number">2</span>]; <span class="hljs-comment">// atribui à variável 'b' o valor de 180</span>
+    </code></pre>
+        <p>Ou ainda de uma forma alternativa, você pode declarar os valores de cada elemento da sua lista</p>
+        <pre><code class="lang-Processing">int[] numbers = { <span class="hljs-number">90</span>, <span class="hljs-number">150</span>, <span class="hljs-number">30</span> };  <span class="hljs-comment">// syntaxe alternativa</span>
+int a = numbers[<span class="hljs-number">0</span>] + numbers[<span class="hljs-number">1</span>];  <span class="hljs-comment">// atribui à variável 'a' o valor de 240</span>
+int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-number">2</span>];  <span class="hljs-comment">// atribui à variável 'b' o valor de 180</span>
+    </code></pre>
+        <ul>
+            <p><strong>Combinando Arrays com loops</strong></p>
+            <li>Também podemos iterar sobre arrays com laços de repetição.</li>
+        </ul>
+        <pre><code class="lang-Processing"><span class="hljs-built_in">int</span> <span class="hljs-built_in">degrees</span> = <span class="hljs-number">360</span>;
+<span class="hljs-built_in">float</span>[] valores = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[<span class="hljs-built_in">degrees</span>];
+<span class="hljs-comment">// Use um for() loop rapidamente iterar os valores de uma array.</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">degrees</span>; i++) {
+  valores[i] = <span class="hljs-built_in">cos</span>(<span class="hljs-literal">TWO_PI</span>/<span class="hljs-built_in">degrees</span> * i);
+}
+</code></pre>
+    </div>
+    <div class="section-item">
+        <h2 id="func">Funções</h2>
+        <p><strong>Funções internas da línguagem</strong></p>
+        <p>Ao longo da aula, já conhecemos e usamos algumas funções próprias da línguagem:</p>
+        <pre><code class="lang-Processing">
+<span class="hljs-keyword">size</span>();
+<span class="hljs-keyword">print()</span>();
+<span class="hljs-keyword">sin()</span>();
+<span class="hljs-keyword">cos</span>();
+<span class="hljs-keyword">random</span>();
+<span class="hljs-keyword">rect</span>();
+<span class="hljs-keyword">line</span>();
+<span class="hljs-keyword">background</span>();
+<span class="hljs-keyword">map</span>();
+<span class="hljs-keyword">int</span>();
+</code></pre>
+        <p><strong>Definindo e Usando Funções</strong></p>
+        <ul>
+            <li>
+                <p>Crie blocos de código reutilizáveis.</p>
+            </li>
+            <li>
+                <p>Sintaxe: </p>
+                <pre><code class="lang-Processing"><span class="hljs-selector-tag">tipo</span> <span class="hljs-selector-tag">nomeDaFun</span>çã<span class="hljs-selector-tag">o</span>(tipo parâmetro) {
+  <span class="hljs-comment">// escreva aqui seu código.</span>
+}
+    </code></pre>
+            </li>
+            <li>
+                <p>Exemplo: </p>
+                <pre><code class="lang-Processing"><span class="hljs-built_in">void</span> <span class="hljs-keyword">drawCircle</span><span class="hljs-params">(<span class="hljs-built_in">float</span> x, <span class="hljs-built_in">float</span> y, <span class="hljs-built_in">int</span> tamanho)</span> {
+  <span class="hljs-comment">// código para desenhar um círculo</span>
+}
+    </code></pre>
+            </li>
+        </ul>
+    </div>
+    <div class="section-item">
+        <h2 id="oop-">Programação Orientada a Objetos - OOP</h2>
+        <p><strong>Classes e Objetos</strong></p>
+        <ul>
+            <li>
+                <p>Encapsulamento: Defina dados e métodos dentro de classes.</p>
+            </li>
+            <li>
+                <p>Objetos são instâncias de classes.</p>
+            </li>
+            <li>
+                <p>Exemplo: </p>
+                <pre><code class="lang-Processing"><span class="hljs-keyword">class</span> Ball {
+
+    <span class="hljs-keyword">int</span> x, y, w, h, Xvel, Yvel;
+
+    Ball(<span class="hljs-keyword">int</span> ballX, <span class="hljs-keyword">int</span> ballY, <span class="hljs-keyword">int</span> BallSize, <span class="hljs-keyword">int</span> speed){
+        x = ballX;
+        y = ballY;
+        w = ballSize;
+        h = ballSize;
+        Yvel = speed;
+        Xvel = <span class="hljs-keyword">int</span>(speed * <span class="hljs-keyword">random</span>(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>));
+    }
+
+    <span class="hljs-keyword">void</span> <span class="hljs-built_in">display</span>(){
+        <span class="hljs-built_in">fill</span>(<span class="hljs-number">239</span>, <span class="hljs-number">184</span>, <span class="hljs-number">212</span>);
+        ellipse(x, y, w, h);
+    }
+
+    <span class="hljs-keyword">void</span> <span class="hljs-built_in">move</span>(){
+        x = x + Xvel;
+        y = y + Yvel;
+    }
+
+    <span class="hljs-keyword">void</span> collide(){
+        <span class="hljs-built_in">if</span>(x &gt; <span class="hljs-built_in">width</span> || x &lt; <span class="hljs-number">0</span>){
+        Xvel *= <span class="hljs-number">-1</span>;
+        }
+        <span class="hljs-built_in">if</span>(y &gt; <span class="hljs-built_in">height</span> || y &lt; <span class="hljs-number">0</span>){
+        Yvel *= <span class="hljs-number">-1</span>;
+        }
+    }
+}
+    </code></pre>
+            </li>
+        </ul>
+        <p><strong>Construtor e Métodos</strong></p>
+        <ul>
+            <li>Uso de <code>new</code> para criar objetos.</li>
+        </ul>
+        <pre><code class="lang-Processing"><span class="hljs-keyword">Ball </span>ball = new <span class="hljs-keyword">Ball</span>(x, y, tamanho, velocidade);
+    </code></pre>
+        <ul>
+            <li>Ainda podemos criar arrays de múltiplos objetos.</li>
+        </ul>
+        <pre><code class="lang-Processing">Ball[] balls = <span class="hljs-keyword">new</span> <span class="hljs-type">Ball</span>[<span class="hljs-number">5</span>];
+
+<span class="hljs-keyword">for</span> (int i = <span class="hljs-number">0</span>; i &lt; balls.length; i++) {
+    balls[i] = <span class="hljs-keyword">new</span> <span class="hljs-type">Ball</span>(x, y, tamanho, velocidade);
+}
+    </code></pre>
     </div>
     <div class="section-item">
         <h2 id="exerc-cio-1-">Exercício 0</h2>
@@ -439,7 +576,7 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
 }
 </code></pre>
         <p>Agora vamos experimentar um pouco com o que já aprendemos.</p>
-        <p>Altere os parametros de posição da forma escolhida, para que ela esteja sempre posicionada na mesma posição
+        <p>Altere os parâmetros de posição da forma escolhida, para que ela esteja sempre posicionada na mesma posição
             do <strong>mouse</strong></p>
         <p class="collapsible">Código Exemplo:</p>
         <pre class="content"><code class="lang-Processing">
@@ -470,9 +607,9 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
 }
 </code></pre>
         <p>Crie uma nova forma geométrica, identica à forma já criada. Mantenha as duas formas sendo desenhadas, porém,
-            na nova forma vamos inverter os parametros de posição <strong>x</strong> e <strong>y</strong>. Assim, o
-            parametro <strong>x</strong> da primeira forma será igual ao parametro <strong>y</strong> da segunda forma,
-            e o parametro <strong>y</strong> da primeira forma será igual ao parametro <strong>x</strong> da segunda
+            na nova forma vamos inverter os parâmetros de posição <strong>x</strong> e <strong>y</strong>. Assim, o
+            parâmetro <strong>x</strong> da primeira forma será igual ao parâmetro <strong>y</strong> da segunda forma,
+            e o parâmetro <strong>y</strong> da primeira forma será igual ao parâmetro <strong>x</strong> da segunda
             forma</p>
         <p class="collapsible">Código Exemplo:</p>
         <pre class="content"><code class="lang-Processing">
@@ -491,7 +628,8 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
             mouse, logo a tela fica completamente colorida pelas formas e não percebemos mais seu traçado.</p>
         <p>Para resolver isso, vamos criar um fundo com uma opacidade levemente transparente. Já vimos em aula que a
             função padrão para gerar fundos é a <code>background()</code>, porém, não podemos utilizar transparência com
-            ela.<br><br>Para resolvermos essa tarefa, vamos utilizar a função de forma geométrica <code>rect()</code>, criando
+            ela.<br><br>Para resolvermos essa tarefa, vamos utilizar a função de forma geométrica <code>rect()</code>,
+            criando
             um retângulo que tenha o tamanho da tela inteira, em sua largura e altura. E para criarmos a sua
             transparência, vamos utilizar a função <code>fill()</code> com os valores de cor e alpha.</p>
         <p class="collapsible">Código Exemplo:</p>
@@ -510,14 +648,15 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
   <span class="hljs-built_in">rect</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">width</span>, <span class="hljs-keyword">height</span>);
 }
 </code></pre>
-        <p>Agora experimente livremente, por exemplo alterando os parametros do código criado ou adicionando mais formas ou cores.</p>
+        <p>Agora experimente livremente, por exemplo alterando os parâmetros do código criado ou adicionando mais formas
+            ou cores.</p>
         <p>A melhor forma de aprendermos é testando nossos conhecimentos e ideias.</p>
     </div>
     <div class="section-item">
         <h2 id="exerc-cio-1-">Exercício 1</h2>
         <h3 id="draw-board">Grade de Repetição</h3>
-        <p>Disponível a partir do dia 06 de Agosto as 17h</p>
-        <!-- <p>Primeiro, vamos configurar as estruturas de controle <code>setup</code> e <code>draw</code> do nosso
+        <p>Nesta proposta, vamos exercitar o uso de loops de repetição, conhecidos como laços <code>for</code>.</p>
+        <p>Primeiro, vamos configurar as estruturas de controle <code>setup</code> e <code>draw</code> do nosso
             programa.</p>
         <p class="collapsible">Código Exemplo:</p>
         <pre class="content"><code class="lang-Processing">
@@ -542,171 +681,251 @@ mono = <span class="hljs-built_in">createFont</span>(<span class="hljs-string">"
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
 
 }
-</code></pre> -->
+</code></pre>
+        <p>
+            Primeiro, vamos exercitar o nosso conhecimento de loops.
+            Dentro da função <code>draw</code>, vamos criar um looping usando a função <code>for()</code>.
+        </p>
+        <p>
+            Para isso, vamos recordar a sintaxe da função. Seus argumentos são compostos por uma
+            <u><strong>declaração</strong></u> de variável,
+            nesse caso criaremos uma variavel de nome 'i' com valor inicial de zero <code>int i = 0</code>. Uma
+            <u><strong>condição</strong></u> para que ele aconteça, usaremos a condição de 'i' sendo menor do que a
+            largura de nossa tela <code>i < width</code>.
+            E por fim, uma <u><strong>incrementação</strong></u> na variável usada, para o exercício vamos somar '10' à
+            variável 'i' <code>i += 10</code>.
+        </p>
+        <p></p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">400</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i < <span class="hljs-keyword">width</span>; i += <span class="hljs-number">10</span>){
+
+  }
+}
+</code></pre>
+        <p>
+            Dentro da função <code>for</code>, usando a função <code>rect()</code>
+            crie um retângulo que tem sua origem no canto superior esquerdo da janela, e sua largura seja metade da
+            largura da tela, e a altura seja metade da altura da tela.
+            Escolha também uma cor para seu preenchimento com a função <code>fill()</code>. E por fim, vamos usar a
+            variável
+            <code>i</code>, criada dentro da função <code>for</code>, para somar ao valor <code>x</code> de nosso
+            retângulo.
+        </p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">400</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i < <span class="hljs-keyword">width</span>; i += <span class="hljs-number">10</span>){
+    <span class="hljs-built_in">fill</span>(<span class="hljs-number">0</span>, <span class="hljs-number">12</span>, <span class="hljs-number">240</span>);
+    <span class="hljs-built_in">rect</span>(<span class="hljs-number">0</span> + i, <span class="hljs-number">0</span>, <span class="hljs-keyword">width</span>/<span class="hljs-number">2</span>, <span class="hljs-keyword">height</span>/<span class="hljs-number">2</span>);
+  }
+}
+</code></pre>
+        <p>
+            Agora, vamos criar outro loop com a função <code>for</code>, envolvendo o loop que já criamos, e os
+            elementos dentro dele.
+            Dessa vez, o novo loop criado terá uma variável 'j', e sua condição será de 'j' sendo menor do que a altura
+            de nossa tela <code>j < height</code>.
+            <br>E então, vamos somar '10' à variável, em sua incrementação <code>j += 10</code>. <br><br>
+            Agora que configuramos nosso novo loop, vamos usar a variável <code>j</code> para somar ao valor y de nosso
+            retângulo.
+        </p>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">400</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">for</span>(<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j < <span class="hljs-keyword">height</span>; j += <span class="hljs-number">10</span>){
+    <span class="hljs-built_in">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i < <span class="hljs-keyword">width</span>; i += <span class="hljs-number">10</span>){
+      <span class="hljs-built_in">fill</span>(<span class="hljs-number">0</span>, <span class="hljs-number">12</span>, <span class="hljs-number">240</span>);
+      <span class="hljs-built_in">rect</span>(<span class="hljs-number">0</span> + i, <span class="hljs-number">0</span> + j, <span class="hljs-keyword">width</span>/<span class="hljs-number">2</span>, <span class="hljs-keyword">height</span>/<span class="hljs-number">2</span>);
+    }
+  }
+}
+</code></pre>
+        <p>
+            Agora, tente alterar alguns parâmetros do código, para ir experimentando novas possibilidades. Altere coisas
+            como o valor que incrementa cada variável de cada loop. <br>
+            Altere também a largura e altura do retângulo criado dentro dos loops. Teste o mesmo código com outras
+            formas além do retângulo, ou use as variáveis dos loops <code>i</code> e <code>j</code> para alterar os
+            tamanhos das formas assim como a maneira como elas são preenchidas com a função <code>fill()</code>.
+        </p>
     </div>
     <div class="section-item">
         <h2 id="exerc-cio-0">Exercício 2</h2>
         <h3 id="tile-map">Tile Map</h3>
-        <p>Disponível a partir do dia 07 de Agosto as 17h</p>
-        <!-- <p>Primeiro, vamos configurar o tamanho da nossa janela com a função <code>size()</code>. Vamos escolher um
+        <p>Primeiro, vamos configurar o tamanho da nossa janela com a função <code>size()</code>. Vamos escolher um
             tamanho
             inicial padrão, de valor igual para a largura e a altura da janela.</p>
         <p class="collapsible">Código Exemplo:</p>
         <pre
             class="content"><code class="lang-Processing"><span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);</code></pre>
         <p>Agora, crie uma linha com a função <code>line()</code> que vá do canto superior esquerdo da tela até o canto
-            inferior
-            direito.</p>
+            inferior direito.
+        </p>
         <p class="collapsible">Código Exemplo:</p>
         <pre class="content"><code class="lang-Processing"><span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
 
 <span class="hljs-built_in">line</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>);
     </code></pre>
-        <p>Após isso, crie uma variável booleanae e atribua a ela o valor: <code>random(1) &gt;= 0.5</code></p>
+        <p>Após isso, crie uma variável booleanae e atribua a ela o valor: <code>random(1) &gt;= 0.5</code>.</p>
         <p class="collapsible">Código Exemplo:</p>
         <pre class="content"><code class="lang-Processing"><span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
 
 <span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
 
 <span class="hljs-built_in">line</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>);
-        </code></pre> -->
-    </div>
-    <!-- <div class="section-item">
-        <h2 id="listas">Arrays</h2>
-        <p>Arrays são listas de dados, usamos para guardar elementos e valores de forma indexada em uma única variável.
-            Os
-            seus
-            indexes começam a contar a partir de &#39;0&#39; seguindo a ordem numérica &#39;0, 1, 2, 3,...&#39; e assim
-            por
-            diante, de acordo com o tamanho da array.</p>
-        <ul>
-            <li>Criar e usar arrays para armazenar múltiplos pontos de dados.</li>
-        </ul>
-        <pre><code class="lang-Processing">int[] numbers = new int[<span class="hljs-number">3</span>]; <span class="hljs-comment">// declara a variável 'numbers' contendo três elementos</span>
+        </code></pre>
+        <p>Assim, criamos uma condição, onde o valor do número aleatório gerado, que pode variar de '0.0' até '1.0', é
+            testado contra o valor '0.5', de maneira que nossa variável booleana será verdadeira <code>true</code> ou
+            falsa <code>false</code>, dependendo do valor aleatório.</p>
+        <p>Desta forma, podemos usar o valor em uma estrutura condicional <code>if</code>.</p>
+        <p>Então, vamos criar com a função <code>if</code> uma condição que tem como argumento a variável booleana
+            criada.</p>
+        <p>E vamos colocar nossa linha criada com a função <code>line()</code>, dentro do bloco de condição
+            <code>if</code>, para ela ser executada apenas se a condição for verdadeira.
+        </p>
 
-numbers[<span class="hljs-number">0</span>] = <span class="hljs-number">90</span>;  <span class="hljs-comment">// atribui ao primeiro elemento</span>
-numbers[<span class="hljs-number">1</span>] = <span class="hljs-number">150</span>; <span class="hljs-comment">// atribui ao segundo elemento</span>
-numbers[<span class="hljs-number">2</span>] = <span class="hljs-number">30</span>;  <span class="hljs-comment">// atribui ao terceiro elemento</span>
-    
-int a = numbers[<span class="hljs-number">0</span>] + numbers[<span class="hljs-number">1</span>]; <span class="hljs-comment">// atribui à variável 'a' o valor de 240</span>
-int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-number">2</span>]; <span class="hljs-comment">// atribui à variável 'b' o valor de 180</span>
-    </code></pre>
-        <p>Ou ainda de uma forma alternativa, você pode declarar os valores de cada elemento da sua lista</p>
-        <pre><code class="lang-Processing">int[] numbers = { <span class="hljs-number">90</span>, <span class="hljs-number">150</span>, <span class="hljs-number">30</span> };  <span class="hljs-comment">// syntaxe alternativa</span>
-    int a = numbers[<span class="hljs-number">0</span>] + numbers[<span class="hljs-number">1</span>];  <span class="hljs-comment">// atribui à variável 'a' o valor de 240</span>
-    int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-number">2</span>];  <span class="hljs-comment">// atribui à variável 'b' o valor de 180</span>
-    </code></pre>
-        <ul>
-            <p><strong>Combinando Arrays com loops</strong></p>
-            <li>Também podemos iterar sobre arrays com laços de repetição.</li>
-        </ul>
-        <pre><code class="lang-Processing"><span class="hljs-built_in">int</span> <span class="hljs-built_in">degrees</span> = <span class="hljs-number">360</span>;
-    <span class="hljs-built_in">float</span>[] valores = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[<span class="hljs-built_in">degrees</span>];
-    <span class="hljs-comment">// Use um for() loop rapidamente iterar os valores de uma array.</span>
-    <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">degrees</span>; i++) {
-      valores[i] = <span class="hljs-built_in">cos</span>(<span class="hljs-literal">TWO_PI</span>/<span class="hljs-built_in">degrees</span> * i);
-    }
-    </code></pre>
-    </div>
-    <div class="section-item">
-        <h2 id="func">Funções</h2>
-        <p><strong>Funções internas da línguagem</strong></p>
-        <p>Ao longo da aula, já conhecemos e usamos algumas funções próprias da línguagem:</p>
-        <pre><code class="lang-Processing">
-size()<span class="hljs-comment">;</span>
-print()<span class="hljs-comment">;</span>
-sin()<span class="hljs-comment">;</span>
-cos()<span class="hljs-comment">;</span>
-<span class="hljs-built_in">random</span>()<span class="hljs-comment">;</span>
-rect()<span class="hljs-comment">;</span>
-line()<span class="hljs-comment">;</span>
-<span class="hljs-keyword">background();
-</span>map()<span class="hljs-comment">;</span>
-int()<span class="hljs-comment">;</span>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing"><span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
+
+<span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
+
+<span class="hljs-keyword">if</span> (leftToRight){
+  <span class="hljs-built_in">line</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>);
+}
 </code></pre>
-        <p><strong>Definindo e Usando Funções</strong></p>
-        <ul>
-            <li>
-                <p>Crie blocos de código reutilizáveis.</p>
-            </li>
-            <li>
-                <p>Sintaxe: </p>
-                <pre><code class="lang-Processing"><span class="hljs-selector-tag">tipo</span> <span class="hljs-selector-tag">nomeDaFun</span>çã<span class="hljs-selector-tag">o</span>(tipo parametro) {
-    <span class="hljs-comment">// escreva aqui seu código.</span>
+        <p>
+            Agora, crie uma estrutura <code>else</code> para caso nossa função <code>if</code> seja falsa, e dentro dela
+            crie uma linha com a função <code>line()</code> que vá do canto superior direito da tela até o canto
+            inferior esquerdo.
+        </p>
+
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing"><span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
+
+<span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
+
+<span class="hljs-keyword">if</span> (leftToRight){
+  <span class="hljs-built_in">line</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>);
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">line</span>(<span class="hljs-built_in">width</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">height</span>);
+}
+</code></pre>
+        <p>
+            Com a estrutura que criamos, dependendo do valor da variável booleana, quando rodamos o programa
+            visualizamos uma ou outra linha.
+        </p><br>
+        <p>
+            Agora crie uma função, e coloque dentro dela a variável booleana, e as estruturas <code>if</code> e
+            <code>else</code> que criamos. Deixando de fora apenas a função <code>size()</code>, assim, ela fica fora do
+            escopo local da função.
+            <br><br>Dê o nome que desejar para essa função, mas lembre-se de que é aconselhado nas boas práticas da
+            programação, que o nome de cada função deve corresponder ao que ela executa.
+            <br><br>Os parâmetros dessa função devem ser três números inteiros, 'x', 'y' e 'tamanho', ou seja,
+            respectivamente:, <code>int x</code>, <code>int y</code> e <code>int tamanho</code>. Agora, vamos usá-los
+            para alterar a forma como as linhas são posicionadas.
+        </p>
+        <p>
+            Altere os parâmetros das linhas criadas dentro das estruturas <code>if</code> e <code>else</code> com os
+            valores dos parâmetros customizáveis da nossa função.<br><br>
+            Na primeira linha, que se visualiza apenas quando a condição <code>if</code> é verdadeira, vamos usar o
+            <code>x</code> e o <code>y</code> como os dois primeiros parâmetros, e para os dois parâmetros seguintes,
+            vamos usar <code>x + tamanho</code> como o terceiro parâmetro, e <code>y + tamanho</code> como o quarto.
+            <br>
+            <br>A primeira função <code>line()</code> ficará assim: <code>line(x, y, x + tamanho, y + tamanho);</code>
+        </p>
+        <br><br>
+        <p>
+            Na segunda linha, que se visualiza apenas quando a condição <code>if</code> é falsa, vamos usar o
+            <code>x + tamanho</code> como o primeiro parâmetro, o <code>y</code> como o segundo parâmetro, o
+            <code>x</code> como o terceiro parâmetro, e <code>y + tamanho</code> como o quarto. <br>
+            <br>A segunda função <code>line()</code> ficará assim: <code>line(x + tamanho, y, x, y + tamanho);</code>
+        </p>
+        <br><br>
+        <p>
+            Para finalizar, crie uma função <code>setup</code>, e dentro dela, vamos executar a nossa função criada,
+            logo abaixo da função <code>size()</code>, com os valores '0', '0' e <code>width</code> para seus
+            parâmetros.
+        </p>
+
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
+  <span class="hljs-built_in">desenhaLinha</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">width</span>);
+}
+
+<span class="hljs-built_in">void</span> <span class="hljs-keyword">desenhaLinha</span><span class="hljs-params">(<span class="hljs-built_in">int</span> x, <span class="hljs-built_in">int</span> y, <span class="hljs-built_in">int</span> tamanho)</span> {
+    <span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
+
+  <span class="hljs-keyword">if</span> (leftToRight){
+    <span class="hljs-built_in">line</span>(x, y, x + tamanho, y + tamanho);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">line</span>(x + tamanho, y, x, y + tamanho);
+  }
+}
+</code></pre>
+        <p>
+            Perceba, que após criarmos e executarmos nossa função, obtemos o mesmo resultado onde cada linha é renderizada de acordo com o valor de nossa variável booleana.
+        </p>
+        <p>
+            Agora, podemos executar essa mesma função criada, porém agora dentro de um nested loop, ou seja, um loop <code>for</code> dentro de outro loop <code>for</code>, para assim, incrementarmos os valores de <code>x</code> e <code>y</code>.
+        </p>
+        <p>
+            Para isso, antes da função <code>setup</code>, vamos criar uma variável de número inteiro, uma <code>int</code>, para incrementar os nossos loops <code>for</code>, e dentro da função <code>setup</code> logo após a função <code>size()</code>, vamos declarar o valor dessa nova variável como metade da largura de nossa tela.
+        </p>
+        <p>
+            Vamos fazer o primeiro loop <code>for</code>. Como seus parâmetros vamos declarar e inicializar uma variável de número inteiro de nome 'x' com o valor '0' <code>int x = 0</code>.
+            Como sua condição, vamos usar <code>x</code> sendo menor que a largura da tela <code>width</code>, ou seja, <code>x < width</code>. E por fim, vamos incrementar o valor de <code>x</code> com a variável criada fora da função <code>setup</code>.
+        </p>
+        <p>
+            Agora, para o seugndo loop <code>for</code>, que colocaremos dentro do primeiro, vamos declarar e inicializar uma variável de número inteiro de nome 'y' com o valor '0' <code>int y = 0</code>.
+            Como sua condição, vamos usar <code>y</code> sendo menor que a altura da tela <code>height</code>, ou seja, <code>y < height</code>. E por fim, vamos incrementar o valor de <code>y</code> também com a variável criada fora da função <code>setup</code>.
+        </p>
+        <br><br>
+        <p>
+            Para finalizar, vamos mudar os parâmetros de nossa função criada para desenhar as linhas, onde o primeiro parâmetro será <code>x</code>, correspondendo ao primeiro loop <code>for</code>, o segundo será <code>y</code>, correspondendo ao segundo loop <code>for</code>, e o terceiro, o parâmetro de tamanho, será a nossa variável de incremento, criada fora da função <code>setup</code>, e inicializada dentro dela.
+        </p>
+        <br>
+        <p class="collapsible">Código Exemplo:</p>
+        <pre class="content"><code class="lang-Processing">
+<span class="hljs-built_in">int</span> incremento;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span> <span class="hljs-params">()</span></span>{
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
+  incremento = <span class="hljs-keyword">width</span>/<span class="hljs-number">2</span>;
+  <span class="hljs-built_in">for</span>(<span class="hljs-built_in">int</span> x = <span class="hljs-number">0</span>; x < <span class="hljs-keyword">width</span>; x += incremento){
+    <span class="hljs-built_in">for</span>(<span class="hljs-built_in">int</span> y = <span class="hljs-number">0</span>; y < <span class="hljs-keyword">height</span>; y += incremento){
+      <span class="hljs-built_in">desenhaLinha</span>(x, y, incremento);
     }
-    </code></pre>
-            </li>
-            <li>
-                <p>Exemplo: </p>
-                <pre><code class="lang-Processing"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">drawCircle</span><span class="hljs-params">(<span class="hljs-keyword">float</span> x, <span class="hljs-keyword">float</span> y, <span class="hljs-keyword">int</span> tamanho)</span> </span>{
-    <span class="hljs-comment">// código para desenhar um círculo</span>
-    }
-    </code></pre>
-            </li>
-        </ul>
-    </div>
-    <div class="section-item">
-        <h2 id="oop-">Programação Orientada a Objetos - OOP</h2>
-        <p><strong>Classes e Objetos</strong></p>
-        <ul>
-            <li>
-                <p>Encapsulamento: Defina dados e métodos dentro de classes.</p>
-            </li>
-            <li>
-                <p>Objetos são instâncias de classes.</p>
-            </li>
-            <li>
-                <p>Exemplo: </p>
-                <pre><code class="lang-Processing"><span class="hljs-keyword">class</span> Ball {
-    
-    <span class="hljs-keyword">int</span> x, y, w, h, Xvel, Yvel;
-    
-    Ball(<span class="hljs-keyword">int</span> ballX, <span class="hljs-keyword">int</span> ballY, <span class="hljs-keyword">int</span> <span class="hljs-built_in">size</span>, <span class="hljs-keyword">int</span> speed){
-      x = ballX;
-      y = ballY;
-      w = <span class="hljs-built_in">size</span>;
-      h = <span class="hljs-built_in">size</span>;
-      Yvel = speed;
-      Xvel = <span class="hljs-keyword">int</span>(speed * <span class="hljs-built_in">random</span>(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>));
-    }
-    
-    <span class="hljs-keyword">void</span> <span class="hljs-built_in">display</span>(){
-      <span class="hljs-built_in">fill</span>(<span class="hljs-number">239</span>, <span class="hljs-number">184</span>, <span class="hljs-number">212</span>);
-      ellipse(x, y, w, h);
-    }
-    
-    <span class="hljs-keyword">void</span> <span class="hljs-built_in">move</span>(){
-      x = x + Xvel;
-      y = y + Yvel;
-    }
-    
-    <span class="hljs-keyword">void</span> collide(){
-      <span class="hljs-built_in">if</span>(x &gt; <span class="hljs-built_in">width</span> || x &lt; <span class="hljs-number">0</span>){
-        Xvel *= <span class="hljs-number">-1</span>;
-      }
-      <span class="hljs-built_in">if</span>(y &gt; <span class="hljs-built_in">height</span> || y &lt; <span class="hljs-number">0</span>){
-        Yvel *= <span class="hljs-number">-1</span>;
-      }
-    }
-    }
-    </code></pre>
-            </li>
-        </ul>
-        <p><strong>Construtor e Métodos</strong></p>
-        <ul>
-            <li>Uso de <code>new</code> para criar objetos.</li>
-        </ul>
-        <pre><code class="lang-Processing"><span class="hljs-keyword">Ball </span><span class="hljs-keyword">ball </span>= new <span class="hljs-keyword">Ball(x, </span>y, tamanho, velocidade)<span class="hljs-comment">;</span>
-    </code></pre>
-        <ul>
-            <li>Ainda podemos criar arrays de múltiplos objetos.</li>
-        </ul>
-        <pre><code class="lang-Processing">Ball[] balls = <span class="hljs-keyword">new</span> <span class="hljs-type">Ball</span>[<span class="hljs-number">5</span>];
-    <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">0</span>; i &lt; balls.length; i++) {
-      vectors[i] = <span class="hljs-keyword">new</span> <span class="hljs-type">PVector</span>();
-    }
-    </code></pre>
-    </div> -->
+  }
+}
+
+<span class="hljs-built_in">void</span> <span class="hljs-keyword">desenhaLinha</span><span class="hljs-params">(<span class="hljs-built_in">int</span> x, <span class="hljs-built_in">int</span> y, <span class="hljs-built_in">int</span> tamanho)</span> {
+  <span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
+
+  <span class="hljs-keyword">if</span> (leftToRight){
+    <span class="hljs-built_in">line</span>(x, y, x + tamanho, y + tamanho);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">line</span>(x + tamanho, y, x, y + tamanho);
+  }
+}
+</code></pre>
+    <p>Agora, experimente mudar o valor de nossa variável <code>incremento</code> para mais e menos que o valor atual, e verá como o padrão que se forma de acordo com essa alteração.</p>
+    <p>Experimente também utilizar outras formas diferentes dentro de cada condição <code>if</code> e <code>else</code> no lugar das linhas. Use sua criatividade agora.</p>
+</div>
 
     <div class="section-item">
         <h2 id="projeto-final">Projetos e Encerramento</h2>
@@ -718,7 +937,7 @@ int()<span class="hljs-comment">;</span>
                 internas da linguagem, unindo todo o conhecimento da aula de hoje que puder colocar.
             </li>
             <li>
-                Queremos ver o que você experimente com a sua criatividade e use o que já absorveu das proposições para
+                Queremos que você experimente com a sua criatividade e use o que já absorveu das proposições para
                 executar esse exercício.
             </li>
         </ul>
@@ -732,11 +951,11 @@ int()<span class="hljs-comment">;</span>
                     sketchs da comunidade de artistas e desenvolvedores no <a
                         href="https://openprocessing.org/discover/">OpenProcessing</a>.</p>
             </li>
-            <!-- <li>
+            <li>
                 <p>Exercícios sugeridos para ampliar habilidades: Criar múltiplos elementos com o uso de classes e
                     orientação de
                     objetos.</p>
-            </li> -->
+            </li>
         </ul>
     </div>
 
@@ -745,17 +964,17 @@ int()<span class="hljs-comment">;</span>
         <p><strong>Próximos Passos e Aprendizado Futuro</strong></p>
         <ul>
             <li>
-                <p>Na próxima aula veremos como criar nossas próprias funções e como manipular imagens e vídeos, através
+                <p>Na próxima aula veremos como manipular imagens e vídeos, através
                     de seus pixels e outros parâmetros.
                 </p>
             </li>
-            <!-- <li>
+            <li>
                 <p>Vamos explorar recursos sonoras, criando e manipulando ondas sonoras e suas propriedades.</p>
             </li>
             <li>
                 <p>Vamos iniciar os conhecimentos em P5js, levando toda a capacidade do Processing para as redes online.
                 </p>
-            </li> -->
+            </li>
         </ul>
     </div>
     <hr>

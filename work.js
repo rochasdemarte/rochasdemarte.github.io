@@ -8,7 +8,7 @@ var works = {
     hypertexto: {
         name: 'Cidade Hypertexto',
         year: '2022',
-        description: '',
+        description: 'Cidade hypertexto é um projeto de arte interativa que mescla o meio digital ao meio urbano,. Com cartazes em realidade aumentada ',
         tags: ['arte', 'code', '3D', 'front', 'web'],
     },
     pixel: {
@@ -149,5 +149,11 @@ var works = {
         description: '',
         tags: ['arte', 'code', 'front', 'web'],
     },
+    jdfinanceiro: {
+        name: 'JD Financeiro',
+        year: '2015',
+        description: 'Campanha de lançamento e divulgação do Banco de financiamento da empresa John Deere. Arte e animações criadas para o projeto.',
+        tags: [ 'arte', 'animation', 'video'],
+    }
 }
 

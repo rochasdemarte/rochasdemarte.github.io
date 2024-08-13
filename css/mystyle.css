@@ -407,6 +407,10 @@ high {
   padding: 100px;
 }
 
+.work-label-images img {
+  width: 100%;
+}
+
 .work-label h1 {
 
 }
