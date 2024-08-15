@@ -12,7 +12,7 @@
 <body>
     <div id="title">
         <h2>Oficina de Programação Criativa</h2>
-        <h1 id="aprendendo-processing">Processing</h1>
+        <h1 id="aprendendo-processing">Processing e P5.js</h1>
     </div>
 
     <section class="h3-container">
@@ -781,7 +781,7 @@ int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-
     </code></pre>
         <p>Após isso, crie uma variável booleanae e atribua a ela o valor: <code>random(1) &gt;= 0.5</code>.</p>
         <p class="collapsible">Código Exemplo:</p>
-        <pre class="content"><code class="lang-Processing"><span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
+        <pre class="content"><code class="lang-Processing"><span class="hljs-keyword">boolean</span> <span class="hljs-built_in">randomTrueOrFalse</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
 
 <span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
 
@@ -798,11 +798,11 @@ int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-
         </p>
 
         <p class="collapsible">Código Exemplo:</p>
-        <pre class="content"><code class="lang-Processing"><span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
+        <pre class="content"><code class="lang-Processing"><span class="hljs-keyword">boolean</span> <span class="hljs-built_in">randomTrueOrFalse</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
 
 <span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
 
-<span class="hljs-keyword">if</span> (leftToRight){
+<span class="hljs-keyword">if</span> (randomTrueOrFalse){
   <span class="hljs-built_in">line</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>);
 }
 </code></pre>
@@ -813,11 +813,11 @@ int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-
         </p>
 
         <p class="collapsible">Código Exemplo:</p>
-        <pre class="content"><code class="lang-Processing"><span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
+        <pre class="content"><code class="lang-Processing"><span class="hljs-keyword">boolean</span> <span class="hljs-built_in">randomTrueOrFalse</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
 
 <span class="hljs-built_in">size</span>(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
 
-<span class="hljs-keyword">if</span> (leftToRight){
+<span class="hljs-keyword">if</span> (randomTrueOrFalse){
   <span class="hljs-built_in">line</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>);
 } <span class="hljs-keyword">else</span> {
   <span class="hljs-built_in">line</span>(<span class="hljs-built_in">width</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">height</span>);
@@ -868,9 +868,9 @@ int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-
 }
 
 <span class="hljs-built_in">void</span> <span class="hljs-keyword">desenhaLinha</span><span class="hljs-params">(<span class="hljs-built_in">int</span> x, <span class="hljs-built_in">int</span> y, <span class="hljs-built_in">int</span> tamanho)</span> {
-    <span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
+    <span class="hljs-keyword">boolean</span> <span class="hljs-built_in">randomTrueOrFalse</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
 
-  <span class="hljs-keyword">if</span> (leftToRight){
+  <span class="hljs-keyword">if</span> (randomTrueOrFalse){
     <span class="hljs-built_in">line</span>(x, y, x + tamanho, y + tamanho);
   } <span class="hljs-keyword">else</span> {
     <span class="hljs-built_in">line</span>(x + tamanho, y, x, y + tamanho);
@@ -914,9 +914,9 @@ int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-
 }
 
 <span class="hljs-built_in">void</span> <span class="hljs-keyword">desenhaLinha</span><span class="hljs-params">(<span class="hljs-built_in">int</span> x, <span class="hljs-built_in">int</span> y, <span class="hljs-built_in">int</span> tamanho)</span> {
-  <span class="hljs-keyword">boolean</span> <span class="hljs-built_in">leftToRight</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
+  <span class="hljs-keyword">boolean</span> <span class="hljs-built_in">randomTrueOrFalse</span> = <span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>) &gt;= <span class="hljs-number">0.5</span>;
 
-  <span class="hljs-keyword">if</span> (leftToRight){
+  <span class="hljs-keyword">if</span> (randomTrueOrFalse){
     <span class="hljs-built_in">line</span>(x, y, x + tamanho, y + tamanho);
   } <span class="hljs-keyword">else</span> {
     <span class="hljs-built_in">line</span>(x + tamanho, y, x, y + tamanho);
