@@ -19,5 +19,7 @@ var sectionItens = document.querySelectorAll(".section-item");
 menuItens.forEach((e, i) => {
     e.addEventListener('click', () => {
         sectionItens[i].scrollIntoView();
+        document.getElementById("nav-bar-btn").classList.toggle("active");
+        document.getElementById("nav-bar").style.maxHeight = null;
     });
 });

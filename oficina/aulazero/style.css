@@ -246,29 +246,30 @@ p.collapsible {
     div {
         margin: 6px;
         padding: 20px;
+        padding-top: 150px;
     }
 
     .lang-Processing {
         width: 100%;
     }
 
-    #title {
-        margin-top: 115px;
-    }
-
     h1 {
-        font-size: 3em;
+        font-size: 4em;
     }
 
     h2 {
-        font-size: 6vw;
-        margin: 20px 0;
+        font-size: 9vw;
+        margin: 50px 0;
     }
 
     .h3-container {
-        background: rgba(14, 14, 13, 0.842);;
+        background: var(--bg);
+        border: solid 2px #5882FA;
+        border-radius: 20px;
+        box-shadow: 0px 0px 40px rgba(14, 14, 13, 0.864);
         font-size: 1.5em;
-        padding: 15px;
+        margin: 6px;
+        padding: 20px;
     }
 
     li a {
