@@ -31,7 +31,6 @@
             <h3 class="menu-item" id="exe-0">Exercício 0</h3>
             <h3 class="menu-item" id="exe-1">Exercício 1</h3>
             <h3 class="menu-item" id="exe-2">Exercício 2</h3>
-            <h3 class="menu-item" id="projetos-e-encerramento">Projetos e Encerramento</h3>
             <h3 class="menu-item" id="conclus-o">Conclusão</h3>
         </section>
     </section>
@@ -878,25 +877,40 @@ int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-
 }
 </code></pre>
         <p>
-            Perceba, que após criarmos e executarmos nossa função, obtemos o mesmo resultado onde cada linha é renderizada de acordo com o valor de nossa variável booleana.
+            Perceba, que após criarmos e executarmos nossa função, obtemos o mesmo resultado onde cada linha é
+            renderizada de acordo com o valor de nossa variável booleana.
         </p>
         <p>
-            Agora, podemos executar essa mesma função criada, porém agora dentro de um nested loop, ou seja, um loop <code>for</code> dentro de outro loop <code>for</code>, para assim, incrementarmos os valores de <code>x</code> e <code>y</code>.
+            Agora, podemos executar essa mesma função criada, porém agora dentro de um nested loop, ou seja, um loop
+            <code>for</code> dentro de outro loop <code>for</code>, para assim, incrementarmos os valores de
+            <code>x</code> e <code>y</code>.
         </p>
         <p>
-            Para isso, antes da função <code>setup</code>, vamos criar uma variável de número inteiro, uma <code>int</code>, para incrementar os nossos loops <code>for</code>, e dentro da função <code>setup</code> logo após a função <code>size()</code>, vamos declarar o valor dessa nova variável como metade da largura de nossa tela.
+            Para isso, antes da função <code>setup</code>, vamos criar uma variável de número inteiro, uma
+            <code>int</code>, para incrementar os nossos loops <code>for</code>, e dentro da função <code>setup</code>
+            logo após a função <code>size()</code>, vamos declarar o valor dessa nova variável como metade da largura de
+            nossa tela.
         </p>
         <p>
-            Vamos fazer o primeiro loop <code>for</code>. Como seus parâmetros vamos declarar e inicializar uma variável de número inteiro de nome 'x' com o valor '0' <code>int x = 0</code>.
-            Como sua condição, vamos usar <code>x</code> sendo menor que a largura da tela <code>width</code>, ou seja, <code>x < width</code>. E por fim, vamos incrementar o valor de <code>x</code> com a variável criada fora da função <code>setup</code>.
+            Vamos fazer o primeiro loop <code>for</code>. Como seus parâmetros vamos declarar e inicializar uma variável
+            de número inteiro de nome 'x' com o valor '0' <code>int x = 0</code>.
+            Como sua condição, vamos usar <code>x</code> sendo menor que a largura da tela <code>width</code>, ou seja,
+            <code>x < width</code>. E por fim, vamos incrementar o valor de <code>x</code> com a variável criada fora da
+            função <code>setup</code>.
         </p>
         <p>
-            Agora, para o seugndo loop <code>for</code>, que colocaremos dentro do primeiro, vamos declarar e inicializar uma variável de número inteiro de nome 'y' com o valor '0' <code>int y = 0</code>.
-            Como sua condição, vamos usar <code>y</code> sendo menor que a altura da tela <code>height</code>, ou seja, <code>y < height</code>. E por fim, vamos incrementar o valor de <code>y</code> também com a variável criada fora da função <code>setup</code>.
+            Agora, para o seugndo loop <code>for</code>, que colocaremos dentro do primeiro, vamos declarar e
+            inicializar uma variável de número inteiro de nome 'y' com o valor '0' <code>int y = 0</code>.
+            Como sua condição, vamos usar <code>y</code> sendo menor que a altura da tela <code>height</code>, ou seja,
+            <code>y < height</code>. E por fim, vamos incrementar o valor de <code>y</code> também com a variável criada
+            fora da função <code>setup</code>.
         </p>
         <br><br>
         <p>
-            Para finalizar, vamos mudar os parâmetros de nossa função criada para desenhar as linhas, onde o primeiro parâmetro será <code>x</code>, correspondendo ao primeiro loop <code>for</code>, o segundo será <code>y</code>, correspondendo ao segundo loop <code>for</code>, e o terceiro, o parâmetro de tamanho, será a nossa variável de incremento, criada fora da função <code>setup</code>, e inicializada dentro dela.
+            Para finalizar, vamos mudar os parâmetros de nossa função criada para desenhar as linhas, onde o primeiro
+            parâmetro será <code>x</code>, correspondendo ao primeiro loop <code>for</code>, o segundo será
+            <code>y</code>, correspondendo ao segundo loop <code>for</code>, e o terceiro, o parâmetro de tamanho, será
+            a nossa variável de incremento, criada fora da função <code>setup</code>, e inicializada dentro dela.
         </p>
         <br>
         <p class="collapsible">Código Exemplo:</p>
@@ -923,56 +937,33 @@ int b = numbers[<span class="hljs-number">1</span>] + numbers[<span class="hljs-
   }
 }
 </code></pre>
-    <p>Agora, experimente mudar o valor de nossa variável <code>incremento</code> para mais e menos que o valor atual, e verá como o padrão que se forma de acordo com essa alteração.</p>
-    <p>Experimente também utilizar outras formas diferentes dentro de cada condição <code>if</code> e <code>else</code> no lugar das linhas. Use sua criatividade agora.</p>
-</div>
-
+        <p>Agora, experimente mudar o valor de nossa variável <code>incremento</code> para mais e menos que o valor
+            atual, e verá como o padrão que se forma de acordo com essa alteração.</p>
+        <p>Experimente também utilizar outras formas diferentes dentro de cada condição <code>if</code> e
+            <code>else</code> no lugar das linhas. Use sua criatividade agora.</p>
+    </div>
     <div class="section-item">
-        <h2 id="projeto-final">Projetos e Encerramento</h2>
-        <br>
-        <p><strong>Mini-Projeto</strong></p>
-        <ul>
-            <li>Criar livremente um elemento visual na tela, interagindo com variáveis em seus parâmetros, usando as
-                funções
-                internas da linguagem, unindo todo o conhecimento da aula de hoje que puder colocar.
-            </li>
-            <li>
-                Queremos que você experimente com a sua criatividade e use o que já absorveu das proposições para
-                executar esse exercício.
-            </li>
-        </ul>
-        <br><br>
-        <p><strong>Desafios e Aprendizado Adicional</strong></p>
+        <h2 id="conclusao">Conclusão</h2>
         <ul>
             <li>
-                <p>Agora, eu te incentivo a explorar tópicos mais avançados e recursos comunitários como fóruns e
+                <p>
+                    Agora que acabamos a introdução ao mundo da programção criativa, continue ampliando seus
+                    conhecimentos.
+                </p>
+            </li>
+            <li>
+                <p>Eu te incentivo a explorar tópicos mais avançados e recursos comunitários como fóruns e
                     exemplos
                     de
                     sketchs da comunidade de artistas e desenvolvedores no <a
                         href="https://openprocessing.org/discover/">OpenProcessing</a>.</p>
             </li>
             <li>
-                <p>Exercícios sugeridos para ampliar habilidades: Criar múltiplos elementos com o uso de classes e
-                    orientação de
-                    objetos.</p>
-            </li>
-        </ul>
-    </div>
-
-    <div class="section-item">
-        <h2 id="conclusao">Conclusão</h2>
-        <p><strong>Próximos Passos e Aprendizado Futuro</strong></p>
-        <ul>
-            <li>
-                <p>Na próxima aula veremos como manipular imagens e vídeos, através
-                    de seus pixels e outros parâmetros.
-                </p>
-            </li>
-            <li>
-                <p>Vamos explorar recursos sonoras, criando e manipulando ondas sonoras e suas propriedades.</p>
-            </li>
-            <li>
-                <p>Vamos iniciar os conhecimentos em P5js, levando toda a capacidade do Processing para as redes online.
+                <p>
+                    Para um aprendizado futuro mais aprofundado nas linguagens de programação, recomendo a <a
+                        href="https://www.w3schools.com/">w3schools</a>.
+                    Ela é uma fonte de estudos e consulta ótima para quem quer adentrar nas línguas raízes dos programas
+                    que aprendemos aqui.
                 </p>
             </li>
         </ul>

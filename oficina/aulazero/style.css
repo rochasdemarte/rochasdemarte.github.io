@@ -96,7 +96,7 @@ div {
     background: var(--bg);
     border: solid 2px #5882FA;
     border-radius: 20px;
-    box-shadow: 0px 0px 40px rgba(14, 14, 13, 0.864);
+    box-shadow: inset 0px 0px 40px rgba(14, 14, 13, 0.864);
 }
 
 code {
@@ -107,6 +107,7 @@ code {
     font-size: 1.2em;
     border-radius: 7px;
     overflow-y: hidden;
+    text-shadow: 1px 1px 2px rgb(14, 14, 13);
     box-shadow: 0px 0px 40px rgba(14, 14, 13, 0.897);
 }
 
@@ -245,8 +246,7 @@ p.collapsible {
 @media only screen and (max-width: 800px) {
     div {
         margin: 6px;
-        padding: 20px;
-        padding-top: 150px;
+        padding: 150px 20px;
     }
 
     .lang-Processing {
@@ -267,7 +267,7 @@ p.collapsible {
         border: solid 2px #5882FA;
         border-radius: 20px;
         box-shadow: 0px 0px 40px rgba(14, 14, 13, 0.864);
-        font-size: 1.5em;
+        font-size: 1.4em;
         margin: 6px;
         padding: 20px;
     }
