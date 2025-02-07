@@ -1,0 +1,14 @@
+{
+    "short_name": "Tecnologia Sorriso",
+    "name": "UniRitter - Odonto - Tecnologia Sorriso",
+    "icons": [
+      {
+        "src": "img/launcher-icon-4x.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/index.html",
+    "display": "fullscreen",
+    "orientation": "landscape"
+  }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="./manifest.json" />
+  <title>UniRitter - Odonto - Tecnologia Sorriso</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./face-api.min.js"></script>
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <div id="start-screen">
+    <div class="center-start">
+      <h1 class="start-text">Você sabe o valor<br>de um sorriso?</h1>
+      <button id="start-btn">Iniciar liberação<br>do estacionamento</button>
+    </div>
+  </div>
+  <div id="result-container">
+    <h1 id="result" class="text-shadow">Sorria e libere o seu<br> estacionamento.</h1>
+  </div>
+  <button class="back-to-start">Voltar</button>
+  <!-- <img src="img/Labio Sorriso.png" alt=""> -->
+  <video id="video" width="720" height="560" autoplay muted></video>
+  <div id="end-screen">
+    <div class="center-end">
+      <p class="text-shadow"></p>
+      <img src="" alt="" id="photo-final"/>
+      <h1 class="end-text text-shadow">Estacionamento<br>liberado</h1>
+    </div>
+    <button class="back-to-start">Ok</button>
+  </div>
+  <div id="flash"></div>
+</body>
+</html>
