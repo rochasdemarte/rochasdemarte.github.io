@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Amsi Pro', 'Arial Narrow Bold', sans-serif;
+    font-family: 'Amsi Pro Condensed SemiBold', sans-serif;
     background-color: var(--color);
     background-size: cover;
     background-repeat: no-repeat;
@@ -78,12 +78,12 @@ img {
     border: none;
     background-color: var(--color);
     color: white;
-    font-size: 2.4em;
-    padding: 35px 45px;
+    font-size: 2.6em;
+    padding: 20px 50px;
     transition: all 0.2s;
-    border-radius: 60px;
+    border-radius: 50px;
     box-shadow: 0px 0px 15px rgba(29, 1, 1, 0.6);
-    font-family: 'Amsi Pro', 'Arial Narrow Bold', sans-serif;
+    font-family: 'Amsi Pro Condensed Black', sans-serif;
 }
 
 #start-btn:hover,
@@ -155,11 +155,11 @@ img {
         background-position: center 30%;
     }
     #result {
-        font-size: 2em;
+        font-size: 2.5em;
     }
     .start-text,
     .end-text {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 }
 
@@ -174,7 +174,7 @@ img {
         background-position: center center;
     }
     #result-container {
-        top: 5%;
+        top: 8%;
     }
 }
 
@@ -203,10 +203,17 @@ img {
 }
 
 @font-face {
-    font-family: 'Amsi Pro';
+    font-family: 'Amsi Pro Condensed Black';
     font-style: normal;
     font-weight: bold;
     src: local(''),
-        url('fonts/AmsiProNormal-Bold.woff2') format('woff2'),
-        url('fonts/AmsiProNormal-Bold.woff') format('woff');
+        url('fonts/AmsiProCond-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Amsi Pro Condensed SemiBold';
+    font-style: normal;
+    font-weight: bold;
+    src: local(''),
+        url('fonts/AmsiProCond-SemiBold.otf') format('opentype');
 }
