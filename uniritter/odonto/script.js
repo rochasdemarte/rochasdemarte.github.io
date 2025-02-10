@@ -9,13 +9,13 @@ const flash = document.getElementById('flash')
 
 let state = 0
 let felicidade = 0
-let factor = 0.6;
+let factor = 0.7;
 
 function handleOrientation() {
   if (screen.orientation.type.includes("portrait")) {
     factor = 1;
   } else {
-    factor = 0.6;
+    factor = 0.7;
   }
 }
 
@@ -89,7 +89,7 @@ video.addEventListener('loadedmetadata', () => {
     //   drawLandmarks(context, landmarks, 'rgb(255, 230, 130)', 2);
     // });
 
-    if (felicidade > 15) {
+    if (felicidade > 12) {
       state = 2
       flash.style.opacity = "0"
       flash.style.width = "100%"
