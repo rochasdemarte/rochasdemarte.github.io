@@ -69,8 +69,8 @@ video.addEventListener('loadedmetadata', () => {
     
     if (happyPercentage >= 0.90 && happyPercentage <= 1 && state == 1) {
       felicidade += 1
-      video.style.border = "solid " + (felicidade / 2) + "px rgb(255, 230, 250)"
-      video.style.boxShadow = "0px 0px " + (felicidade * 5) + "px rgba(250, 200, 220, 0.9)"
+      video.style.border = "solid " + (felicidade) + "px rgb(255, 230, 50)"
+      video.style.boxShadow = "0px 0px " + (felicidade * 5) + "px rgba(250, 200, 20, 0.9)"
       resultText.innerText = "Sorriso detectado.\nLiberando seu estacionamento..."
 
       // resizedDetections.forEach(({ landmarks }) => {
@@ -89,7 +89,7 @@ video.addEventListener('loadedmetadata', () => {
     //   drawLandmarks(context, landmarks, 'rgb(255, 230, 130)', 2);
     // });
 
-    if (felicidade > 20) {
+    if (felicidade > 15) {
       state = 2
       flash.style.opacity = "0"
       flash.style.width = "100%"
