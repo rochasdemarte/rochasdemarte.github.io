@@ -3,9 +3,11 @@ const startScreen = document.getElementById('start-screen')
 const startBtn = document.getElementById('start-btn')
 const backToStartBtn = document.getElementsByClassName('back-to-start')
 const resultText = document.getElementById('result')
+const preEnd = document.getElementById('pre-end-screen')
 const endScreen = document.getElementById('end-screen')
 const photo = document.getElementById('photo-final')
 const flash = document.getElementById('flash')
+const finalflash = document.getElementById('finalflash')
 
 let state = 0
 let felicidade = 0
@@ -49,8 +51,12 @@ for (let i = 0; i < backToStartBtn.length; i++) {
     startScreen.style.display = "block"
     backToStartBtn[0].style.display = "block";
     endScreen.style.display = "none"
+    resultText.style.display = "block";
+    video.style.display = "block";
     flash.style.opacity = "1"
     flash.style.width = "0%"
+    finalflash.style.opacity = "1"
+    finalflash.style.width = "0%"
   })  
 }
 
@@ -69,7 +75,7 @@ video.addEventListener('loadedmetadata', () => {
     
     if (happyPercentage >= 0.90 && happyPercentage <= 1 && state == 1) {
       felicidade += 1
-      video.style.border = "solid " + (felicidade) + "px rgb(255, 230, 50)"
+      video.style.border = "solid " + (felicidade * 0.8) + "px rgb(255, 230, 50)"
       video.style.boxShadow = "0px 0px " + (felicidade * 5) + "px rgba(250, 200, 20, 0.9)"
       resultText.innerText = "Sorriso detectado.\nLiberando seu estacionamento..."
 
@@ -84,12 +90,11 @@ video.addEventListener('loadedmetadata', () => {
       resultText.innerText = "Sorria e libere o seu\nestacionamento."
     }
 
-
     // resizedDetections.forEach(({ landmarks }) => {
     //   drawLandmarks(context, landmarks, 'rgb(255, 230, 130)', 2);
     // });
 
-    if (felicidade > 12) {
+    if (felicidade > 15) {
       state = 2
       flash.style.opacity = "0"
       flash.style.width = "100%"
@@ -98,8 +103,17 @@ video.addEventListener('loadedmetadata', () => {
       const data = canvas.toDataURL("image/png");
       photo.setAttribute("src", data);
       backToStartBtn[0].style.display = "none";
-      endScreen.style.display = "block";
+      resultText.style.display = "none";
+      video.style.display = "none";
+      preEnd.style.display = "block";
       
+      setTimeout(() => {
+        finalflash.style.opacity = "0"
+        finalflash.style.width = "100%"
+        endScreen.style.display = "block";
+        preEnd.style.display = "none";
+      }, 2000);
+
       // Download da foto tirada
       // var dl = document.createElement("a");
       // dl.href = data;
