@@ -94,7 +94,7 @@ video.addEventListener('loadedmetadata', () => {
     //   drawLandmarks(context, landmarks, 'rgb(255, 230, 130)', 2);
     // });
 
-    if (felicidade > 15) {
+    if (felicidade > 12) {
       state = 2
       flash.style.opacity = "0"
       flash.style.width = "100%"
@@ -112,7 +112,7 @@ video.addEventListener('loadedmetadata', () => {
         finalflash.style.width = "100%"
         endScreen.style.display = "block";
         preEnd.style.display = "none";
-      }, 2000);
+      }, 2300);
 
       // Download da foto tirada
       // var dl = document.createElement("a");
